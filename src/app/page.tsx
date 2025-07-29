@@ -28,7 +28,7 @@ export default function LimeLandingPage() {
 
         <div className="text-left text-base leading-relaxed space-y-4">
           <p>
-            Whether you're ordering sushi in Tokyo or asking for vegetarian options in rural France, Lime gives you the words — and the confidence — to do it right.
+            Whether you are ordering sushi in Tokyo or asking for vegetarian options in rural France, Lime gives you the words — and the confidence — to do it right.
           </p>
           <p>
             No grammar drills. No generic phrasebooks. Just real, useful words in context — spoken clearly, beautifully designed, and tailored for food lovers on the move.
