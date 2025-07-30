@@ -2,11 +2,11 @@ export default function ThanksPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-offwhite px-4 text-center text-charcoal">
       <h1 className="text-2xl md:text-3xl font-semibold mb-4">
-        You're on the list — welcome to the WordBento beta!
+        You are on the list — welcome to the WordBento beta!
       </h1>
 
       <p className="text-base md:text-lg mb-6 max-w-md leading-relaxed">
-        We'll be in touch soon with early access and updates.
+        We will be in touch soon with early access and updates.
         Thanks for helping us shape WordBento — we’re building it for you.
       </p>
 
