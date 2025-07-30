@@ -1,21 +1,14 @@
-// src/components/ProjectCard.tsx
-import Link from "next/link"
-
-type Project = {
+// src/components/InfoCard.tsx
+type InfoCardProps = {
   title: string
-  slug: string
-  summary: string
-  image?: string
+  body: string
 }
 
-export default function ProjectCard({ title, slug, summary }: Project) {
+export default function InfoCard({ title, body }: InfoCardProps) {
   return (
-    <div className="border rounded-xl p-4 hover:shadow transition">
-      <h2 className="text-xl font-semibold mb-2">{title}</h2>
-      <p className="text-gray-700 mb-3">{summary}</p>
-      <Link href={`/projects/${slug}`} className="text-blue-600 underline">
-        Read more →
-      </Link>
+    <div className="bg-white max-w-2xl mx-auto px-6 py-10 text-center rounded-xl shadow-sm">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
+      <p className="text-gray-700 leading-relaxed text-lg">{body}</p>
     </div>
   )
 }

@@ -1,29 +1,41 @@
-import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
-export default function Hero() {
+const Hero: React.FC = () => {
   return (
-    <section className="py-20 text-center">
-      <h1 className="text-4xl md:text-5xl font-bold max-w-3xl mx-auto">
-        Why Legal Tech Fails — and How to Avoid It
-      </h1>
-      <p className="mt-4 text-gray-600 max-w-xl mx-auto">
-        7 mistakes smart lawyers keep making — and how to fix them before they waste more time and money.
-      </p>
+    <section className="bg-brand-yellow py-16">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-6">
+        {/* Left: Text */}
+        <div className="text-center md:text-left max-w-xl">
+          <p className="text-lg font-semibold text-gray-900 mb-2">
+            Launching September 2025
+          </p>
 
-      <div className="mt-6 flex justify-center gap-4">
-        <a
-          href="#signup"
-          className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800"
-        >
-          Get the Free Guide
-        </a>
-        <Link
-          href="/articles/why-legal-tech-fails"
-          className="inline-block bg-white text-black border border-black px-6 py-3 rounded hover:bg-gray-100"
-        >
-          Read the Article
-        </Link>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+            Enjoy food,<br />travel and learning<br />new words?
+          </h1>
+
+          <p className="text-lg text-gray-800">
+            For a limited time, we are offering <br />
+            free access to <span className="font-semibold">WordBento</span><br />
+            in return for your valuable feedback
+          </p>
+        </div>
+
+        {/* Right: Phone mockup */}
+        <div className="flex justify-center md:justify-end">
+          <Image
+            src="/images/mango-phone-mockup.png"
+            alt="WordBento app showing mango screen"
+            width={300}
+            height={600}
+            className="w-auto h-auto max-h-[500px]"
+            priority
+          />
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

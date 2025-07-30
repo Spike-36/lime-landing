@@ -17,6 +17,8 @@ export default {
         offwhite: '#F9F9F9',
         sand: '#DDD5C7',
         olive: '#708070',
+        // ✅ Add this line
+        'brand-yellow': '#fbd055',
       },
     },
   },

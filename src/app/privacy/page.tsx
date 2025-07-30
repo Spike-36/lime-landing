@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function PrivacyPolicyPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">Privacy Policy – Agile Advocacy</h1>
+      <h1 className="text-3xl font-bold mb-6">Privacy Policy – Kumamoto.dev</h1>
 
       <p className="mb-6 text-sm text-gray-500">Last updated: 10 July 2025</p>
 
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
             <li>Withdraw your consent at any time</li>
           </ul>
           <p className="mt-2">
-            To do any of the above, just email us at <strong>petermilligan@agileadvocacy.co.uk</strong>.
+            To do any of the above, just email us at <strong>hello@kumamoto.dev</strong>.
             Every email we send will include an unsubscribe link.
           </p>
         </div>
@@ -54,8 +54,8 @@ export default function PrivacyPolicyPage() {
 
         <div>
           <h2 className="font-semibold text-xl mb-2">Who we are</h2>
-          <p>Agile Advocacy is a UK-based legal tech consultancy.</p>
-          <p>Contact us at: <strong>petermilligan@agileadvocacy.co.uk</strong></p>
+          <p>Kumamoto.dev is a trading name.</p>
+          <p>Contact us at: <strong>hello@kumamoto.dev</strong></p>
         </div>
 
         <div>
