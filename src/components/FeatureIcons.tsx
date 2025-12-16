@@ -10,7 +10,7 @@ const features: IconFeature[] = [
   {
     title: "Female Voices",
     description: "We can integrate Skån into virtually any design of backpack.",
-    icon: <span className="text-yellow-400 text-5xl">👩‍🦰</span>, // replace with actual SVG/icon
+    icon: <span className="text-yellow-400 text-5xl">👩‍🦰</span>,
   },
   {
     title: "Features",
@@ -37,7 +37,7 @@ const features: IconFeature[] = [
 export default function FeatureIcons() {
   return (
     <section className="bg-white py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-10">
           Selected Features
         </h2>
@@ -45,7 +45,7 @@ export default function FeatureIcons() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-black text-white rounded-3xl p-6 flex flex-col items-center justify-center space-y-4 shadow-md"
+              className="bg-transparent text-black border border-gray-300 rounded-3xl p-6 flex flex-col items-center justify-center space-y-4"
             >
               <div>{feature.icon}</div>
               <p className="text-sm">{feature.description}</p>

@@ -4,7 +4,7 @@ import React from "react";
 const Hero: React.FC = () => {
   return (
     <section className="bg-brand-yellow py-16">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-24 px-6">
         {/* Left: Text */}
         <div className="text-center md:text-left max-w-xl">
           <p className="text-lg font-semibold text-gray-900 mb-2">
@@ -23,15 +23,17 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Right: Phone mockup */}
-        <div className="flex justify-center md:justify-end">
-          <Image
-            src="/images/mango-phone-mockup.png"
-            alt="WordBento app showing mango screen"
-            width={300}
-            height={600}
-            className="w-auto h-auto max-h-[500px]"
-            priority
-          />
+        <div className="flex justify-center md:justify-center">
+          <div className="pl-8">
+            <Image
+              src="/images/apple.png"
+              alt="WordBento app showing mango screen"
+              width={450}
+              height={900}
+              className="w-auto h-auto max-h-[750px]"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

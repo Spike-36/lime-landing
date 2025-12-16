@@ -26,7 +26,7 @@ const testimonials = [
 export default function TestimonialBlock() {
   return (
     <section className="bg-yellow-300 py-16 px-4">
-      <div className="max-w-4xl mx-auto space-y-12">
+      <div className="max-w-3xl mx-auto space-y-12">
         {testimonials.map(({ quote, name, italic }, i) => (
           <div key={i} className="text-lg text-black">
             <p className={italic ? "italic mb-2" : "mb-2"}>{quote}</p>
