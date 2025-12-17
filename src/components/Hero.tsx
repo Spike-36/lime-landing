@@ -3,13 +3,12 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-brand-yellow py-16">
+    <section className="bg-brand-accent py-16">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-24 px-6">
         {/* Left: Text */}
         <div className="text-center md:text-left max-w-xl">
           <p className="text-lg font-semibold text-gray-900 mb-2">
-            Launching September 2025
-          </p>
+            Launching September 2029          </p>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
             Enjoy food,<br />travel and learning<br />new words?
@@ -17,7 +16,7 @@ const Hero: React.FC = () => {
 
           <p className="text-lg text-gray-800">
             For a limited time, we are offering <br />
-            free access to <span className="font-semibold">WordBento</span><br />
+            free access to <span className="font-semibold"><YumWords></YumWords></span><br />
             in return for your valuable feedback
           </p>
         </div>
