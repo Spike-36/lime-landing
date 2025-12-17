@@ -5,20 +5,19 @@ import React from "react";
 const testimonials = [
   {
     quote:
-      "Born in the 1960s, I’ve experienced that familiar fear and anxiety while walking home alone—especially after dark.",
-    name: "Noriko - Japan",
+      "Exactly what I needed when eating out — simple, fast, and no distractions.",
+    name: "Yoko - Japan",
     italic: false,
   },
   {
     quote:
-      "Born in the 1960s, I’ve experienced that familiar fear and anxiety while walking home alone—especially after dark.",
+      "I like that it works offline and doesn’t try to do too much",
     name: "John - UK",
     italic: true,
   },
   {
     quote:
-      "Born in the 1960s, I’ve experienced that familiar fear and anxiety while walking home alone—especially after dark.",
-    name: "Chou - Thailand",
+      "Clean design, useful words, and no clutter. It does one job well.",
     italic: false,
   },
 ];

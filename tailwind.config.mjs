@@ -18,6 +18,7 @@ export default {
         sand: '#DDD5C7',
         olive: '#708070',
         // ✅ Add this line
+        'brand-accent': '#ff6b3d',
         'brand-yellow': '#fbd055',
       },
     },

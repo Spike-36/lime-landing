@@ -58,7 +58,7 @@ export default function BetaSignupBlock() {
         Beta Testers
       </h2>
       <p className="max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
-        Join our team of WordBento <em>beta</em> testers — help us shape the product and get free access to Version 1.0 on release.
+        Join our team of YumWords <em>beta</em> testers — help us shape the product and get free access to Version 1.0 on release.
       </p>
 
       <div className="bg-yellow-300 px-6 py-8 rounded-md max-w-md mx-auto shadow-md">

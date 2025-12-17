@@ -9,10 +9,16 @@ export default function WhoWeAreBlock() {
           especially after dark.
         </p>
         <p>
-          Like many women, I’ve followed all the advice to increase my chances of escape or survival.
-          My top five? Flat shoes—in case I need to run. Keys between my fingers. Taking the longer, better-lit
-          route. Avoiding headphones—or keeping one ear free. Constantly scanning my surroundings,
-          looking over my shoulder, and, if necessary, crossing the street.
+          Kumamoto Development is an independent software studio focused on building simple, useful digital products.
+The work centres on clarity, reliability, and respectful design choices.
+Apps are designed to be easy to understand and practical in everyday situations.
+User privacy is treated as a priority, not an afterthought.
+The studio avoids unnecessary complexity, tracking, and intrusive features.
+Products are shaped by real-world use rather than abstract metrics.
+Kumamoto Development values thoughtful engineering and clean presentation.
+The goal is to create tools that people can trust and enjoy using.
+Development is ongoing, with attention paid to consistency and quality.
+Every project aims to solve a specific problem well rather than many problems poorly.
         </p>
       </div>
     </section>

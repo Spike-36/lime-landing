@@ -5,15 +5,15 @@ export default function FeatureIntro() {
     <section className="px-6 py-10">
       <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed text-justify">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          What is WordBento?
+          What is ?
         </h2>
         <p className="mb-4">
-          WordBento2 is your personal language companion for food-focused travel.
+          Yumwords is your personal language companion for food-focused travel.
           Hear how to say useful words in the local language — fast, fun, and beautifully designed.
         </p>
         <p>
           Whether you’re navigating street food in Osaka or ordering tapas in Madrid,
-          WordBento gives you the confidence to speak up and savour the experience.
+          Yumwords gives you the confidence to speak up and savour the experience.
         </p>
       </div>
     </section>
