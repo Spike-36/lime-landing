@@ -8,7 +8,8 @@ const Hero: React.FC = () => {
         {/* Left: Text */}
         <div className="text-center md:text-left max-w-xl">
           <p className="text-lg font-semibold text-gray-900 mb-2">
-            Launching September 2029          </p>
+            Launching September 2029
+          </p>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
             Enjoy food,<br />travel and learning<br />new words?
@@ -16,7 +17,7 @@ const Hero: React.FC = () => {
 
           <p className="text-lg text-gray-800">
             For a limited time, we are offering <br />
-            free access to <span className="font-semibold"><YumWords></YumWords></span><br />
+            free access to <span className="font-semibold">YumWords</span><br />
             in return for your valuable feedback
           </p>
         </div>
