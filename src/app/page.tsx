@@ -1,12 +1,13 @@
 import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
+import AppDemo from "@/components/app-demo/AppDemo";
 import FeatureIntro from "@/components/FeatureIntro";
 import FeatureGrid from "@/components/FeatureGrid";
 import FeatureHighlight from "@/components/FeatureHighlight";
 import FeatureIcons from "@/components/FeatureIcons";
 import TestimonialBlock from "@/components/TestimonialBlock";
 import BetaSignupBlock from "@/components/BetaSignupBlock";
-import WhoWeAreBlock from "@/components/WhoWeAreBlock"; // ✅ NEW
+import WhoWeAreBlock from "@/components/WhoWeAreBlock";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -14,28 +15,19 @@ export default function Page() {
       {/* Hero */}
       <Hero />
 
-      {/* Feature Intro – simple paragraph section */}
+      {/* Functional App Demo */}
+      <section className="px-4 py-8">
+        <AppDemo />
+      </section>
+
       <FeatureIntro />
-
-      {/* Feature Grid – Ingredients / Dishes / Useful Phrases */}
       <FeatureGrid />
-
-      {/* Feature Highlight – big yellow block with heading + para */}
       <FeatureHighlight />
-
-      {/* Feature Icons – visual tiles for secondary features */}
       <FeatureIcons />
-
-      {/* Testimonials – user quotes in yellow background */}
       <TestimonialBlock />
-
-      {/* Early Access CTA – Beta Signup */}
       <BetaSignupBlock />
-
-      {/* Who We Are – final component */}
       <WhoWeAreBlock />
 
-      {/* Contact */}
       <div className="mt-12 text-base text-gray-700 text-center px-4">
         Questions or feedback?{" "}
         <a
@@ -46,7 +38,6 @@ export default function Page() {
         </a>
       </div>
 
-      {/* Footer */}
       <Footer />
     </main>
   );
