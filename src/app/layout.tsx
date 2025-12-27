@@ -17,7 +17,7 @@ const serif = Source_Serif_4({
 })
 
 export const metadata = {
-  title: 'WordBento',
+  title: 'YumWords',
   description: 'Why legal tech fails — and how to fix it.',
 }
 

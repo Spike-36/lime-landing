@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-4 border-b">
       <Link href="/" className="text-xl font-bold">
-        Pete Milligan
+        Yum-Words
       </Link>
       <div className="space-x-4">
         <Link href="/projects" className="hover:underline">Projects</Link>

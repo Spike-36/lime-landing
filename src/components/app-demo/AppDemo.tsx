@@ -17,9 +17,7 @@ export default function AppDemo() {
     }
 
     audioRef.current.currentTime = 0
-    audioRef.current.play().catch(() => {
-      // swallow errors silently for demo safety
-    })
+    audioRef.current.play().catch(() => {})
   }
 
   const next = () => {
@@ -40,52 +38,74 @@ export default function AppDemo() {
 
   return (
     <div className="flex justify-center">
-      {/* Phone shell */}
       <div className="w-[360px] h-[720px] rounded-[2.5rem] bg-black p-2 shadow-xl">
         <div className="relative h-full w-full rounded-[2rem] bg-white overflow-hidden">
 
-          {/* Camera / notch hint */}
-          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-10" />
+          {/* Notch */}
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20" />
 
-          {/* Status bar */}
-          <div className="h-8 flex items-center justify-center text-xs text-gray-500 border-b">
-            9:41
-          </div>
+          <div className="flex flex-col h-full">
 
-          {/* App content */}
-          <div className="flex flex-col items-center gap-4 p-4">
-            <img
-              src={item.image}
-              alt={item.word}
-              className="w-full rounded-lg"
-            />
+            {/* TOP HALF — IMAGE */}
+            <div className="relative h-1/2 w-full">
+              <img
+                src={item.image}
+                alt={item.word}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
 
-            <div className="text-2xl font-semibold">{item.word}</div>
-            <div className="text-gray-600">{item.phonetic}</div>
+            {/* BOTTOM HALF — CONTENT */}
+            <div className="relative h-1/2 flex flex-col items-center pt-10 px-6">
 
-            <button
-              onClick={playAudio}
-              className="px-4 py-2 border rounded"
-            >
-              Play
-            </button>
-
-            <div className="flex gap-4 mt-2">
+              {/* Left chevron */}
               <button
                 onClick={prev}
-                className="px-3 py-1 border rounded"
+                aria-label="Previous"
+                className="absolute left-6 bottom-6 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center"
               >
-                Prev
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
               </button>
+
+              {/* Right chevron */}
               <button
                 onClick={next}
-                className="px-3 py-1 border rounded"
+                aria-label="Next"
+                className="absolute right-6 bottom-6 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center"
               >
-                Next
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+
+              <div className="text-3xl font-semibold mt-2">{item.word}</div>
+              <div className="text-gray-500 italic">{item.phonetic}</div>
+
+              <button
+                onClick={playAudio}
+                className="mt-4 px-4 py-2 border rounded"
+              >
+                Play
               </button>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
