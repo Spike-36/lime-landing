@@ -1,11 +1,12 @@
-
 "use client"
 
 import { useState, useRef } from "react"
 import { demoItems } from "./demoData"
+import InfoSheet from "./InfoSheet"
 
 export default function AppDemo() {
   const [index, setIndex] = useState(0)
+  const [showInfo, setShowInfo] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const item = demoItems[index]
@@ -45,6 +46,7 @@ export default function AppDemo() {
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20" />
 
+          {/* Main content */}
           <div className="flex flex-col h-full">
 
             {/* TOP HALF — IMAGE */}
@@ -59,12 +61,10 @@ export default function AppDemo() {
             {/* BOTTOM HALF — CONTENT */}
             <div className="relative h-1/2 flex flex-col items-center pt-10 px-6 text-center">
 
-              {/* Native word */}
               <div className="text-3xl font-semibold">
                 {item.word}
               </div>
 
-              {/* Speaker (Material icon) */}
               <button
                 onClick={playAudio}
                 aria-label="Play audio"
@@ -78,29 +78,24 @@ export default function AppDemo() {
                 </span>
               </button>
 
-              {/* Phonetic */}
               <div className="mt-3 italic text-orange-500">
-  [{item.phonetic}]
-</div>
+                [{item.phonetic}]
+              </div>
 
-              {/* English */}
               <div className="mt-3 text-lg font-medium">
                 {item.translation}
               </div>
 
-              {/* Description */}
               {item.description && (
                 <>
                   <p className="mt-4 text-sm text-gray-500 leading-relaxed max-w-[260px]">
                     {item.description}
                   </p>
 
-                  {/* More … */}
                   <button
                     type="button"
                     className="mt-2 text-sm font-medium text-orange-500 hover:underline"
-                    aria-label="More information"
-                    onClick={() => {}}
+                    onClick={() => setShowInfo(true)}
                   >
                     More …
                   </button>
@@ -144,9 +139,23 @@ export default function AppDemo() {
 
             </div>
           </div>
+
+          {/* ✅ InfoSheet INSIDE phone */}
+          <InfoSheet
+            open={showInfo}
+            onClose={() => setShowInfo(false)}
+            word={item.word}
+            phonetic={item.phonetic}
+            meaning={item.translation}
+            description={item.description}
+            about={item.about}
+            ingredients={item.ingredients}
+            preparation={item.preparation}
+            onPlayAudio={playAudio}
+          />
+
         </div>
       </div>
     </div>
   )
 }
-
