@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState, useRef } from "react"
@@ -38,7 +39,7 @@ export default function AppDemo() {
 
   return (
     <div className="flex justify-center">
-      <div className="w-[360px] h-[720px] rounded-[2.5rem] bg-black p-2 shadow-xl">
+      <div className="w-[360px] h-[720px] rounded-[2.5rem] bg-black/80 p-1.5 shadow-lg">
         <div className="relative h-full w-full rounded-[2rem] bg-white overflow-hidden">
 
           {/* Notch */}
@@ -56,9 +57,57 @@ export default function AppDemo() {
             </div>
 
             {/* BOTTOM HALF — CONTENT */}
-            <div className="relative h-1/2 flex flex-col items-center pt-10 px-6">
+            <div className="relative h-1/2 flex flex-col items-center pt-10 px-6 text-center">
 
-              {/* Left chevron */}
+              {/* Native word */}
+              <div className="text-3xl font-semibold">
+                {item.word}
+              </div>
+
+              {/* Speaker (Material icon) */}
+              <button
+                onClick={playAudio}
+                aria-label="Play audio"
+                className="mt-4 text-gray-400 hover:text-gray-600 transition"
+              >
+                <span
+                  className="material-symbols-outlined"
+                  style={{ fontSize: 32, lineHeight: 1 }}
+                >
+                  volume_up
+                </span>
+              </button>
+
+              {/* Phonetic */}
+              <div className="mt-3 italic text-orange-500">
+  [{item.phonetic}]
+</div>
+
+              {/* English */}
+              <div className="mt-3 text-lg font-medium">
+                {item.translation}
+              </div>
+
+              {/* Description */}
+              {item.description && (
+                <>
+                  <p className="mt-4 text-sm text-gray-500 leading-relaxed max-w-[260px]">
+                    {item.description}
+                  </p>
+
+                  {/* More … */}
+                  <button
+                    type="button"
+                    className="mt-2 text-sm font-medium text-orange-500 hover:underline"
+                    aria-label="More information"
+                    onClick={() => {}}
+                  >
+                    More …
+                  </button>
+                </>
+              )}
+
+              {/* Navigation chevrons */}
               <button
                 onClick={prev}
                 aria-label="Previous"
@@ -76,7 +125,6 @@ export default function AppDemo() {
                 </svg>
               </button>
 
-              {/* Right chevron */}
               <button
                 onClick={next}
                 aria-label="Next"
@@ -94,20 +142,11 @@ export default function AppDemo() {
                 </svg>
               </button>
 
-              <div className="text-3xl font-semibold mt-2">{item.word}</div>
-              <div className="text-gray-500 italic">{item.phonetic}</div>
-
-              <button
-                onClick={playAudio}
-                className="mt-4 px-4 py-2 border rounded"
-              >
-                Play
-              </button>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   )
 }
+

@@ -1,16 +1,19 @@
 export const demoItems = [
   {
-    id: "sushi",
-    image: "/demo/images/sushi.jpg",
-    word: "寿司",
-    phonetic: "sushi",
-    audio: "/demo/audio/sushi.mp3",
+    id: "butterfly-pea",
+    image: "/demo/images/butterfly_pea.jpg",
+    word: "น้ำอัญชัน",
+    phonetic: "nam an-CHAN",
+    audio: "/demo/audio/butterfly_pea.mp3",
+    description: "Blue herbal tea made from dried butterfly pea flowers.",
   },
   {
-    id: "kimchi",
-    image: "/demo/images/kimchi.jpg",
-    word: "김치",
-    phonetic: "gimchi",
-    audio: "/demo/audio/kimchi.mp3",
+    id: "pad-thai",
+    image: "/demo/images/pad_thai.jpg",
+    word: "ผัดไทย",
+    phonetic: "pàt tai",
+    audio: "/demo/audio/pad_thai.mp3",
+    description:
+      "Stir-fried rice noodles with egg, seasoning, and garnishes.",
   },
 ]

@@ -21,9 +21,20 @@ export const metadata = {
   description: 'Why legal tech fails — and how to fix it.',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" className={`${ibm.variable} ${serif.variable}`}>
+      <head>
+        {/* Material Symbols (for volume_up icon) */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-sans">
         <ConditionalNavbar />
         {children}
