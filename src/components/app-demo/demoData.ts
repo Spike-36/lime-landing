@@ -1,41 +1,40 @@
-
 export const demoItems = [
   {
     id: "butterfly-pea",
     image: "/demo/images/butterfly_pea.jpg",
     word: "น้ำอัญชัน",
     phonetic: "nam an-CHAN",
+    translation: "butterfly pea tea",
     audio: "/demo/audio/butterfly_pea.mp3",
     description: "Blue herbal tea made from dried butterfly pea flowers.",
     about:
-      "Butterfly pea tea is a traditional herbal drink in Southeast Asia, known for its deep blue colour and mild, earthy flavour. It is often served hot or iced and may change colour when citrus is added.",
+      "Butterfly pea tea is a traditional Thai herbal drink known for its deep blue colour, which turns purple when citrus is added.",
     ingredients: [
       "Dried butterfly pea flowers",
       "Water",
     ],
     preparation:
-      "The dried flowers are steeped in hot water until the liquid turns deep blue. The tea can be served plain or sweetened, and lemon or lime juice is sometimes added for flavour and colour change.",
+      "The dried flowers are steeped in hot water to extract colour and flavour. Often served hot or cold.",
   },
   {
     id: "pad-thai",
     image: "/demo/images/pad_thai.jpg",
     word: "ผัดไทย",
     phonetic: "pàt tai",
+    translation: "pad thai",
     audio: "/demo/audio/pad_thai.mp3",
     description:
       "Stir-fried rice noodles with egg, seasoning, and garnishes.",
     about:
-      "Pad Thai is one of Thailand’s most well-known dishes, commonly sold by street vendors and served in restaurants. It balances salty, sweet, sour, and savoury flavours.",
+      "Pad Thai is one of Thailand’s most famous dishes, commonly cooked to order at street stalls.",
     ingredients: [
       "Rice noodles",
-      "Egg",
-      "Tofu or shrimp",
-      "Bean sprouts",
-      "Garlic chives",
-      "Crushed peanuts",
-      "Tamarind sauce",
+      "Eggs",
+      "Oil",
+      "Fish sauce",
+      "Tamarind",
     ],
     preparation:
-      "Soaked rice noodles are stir-fried over high heat with egg, protein, and sauce. The dish is finished with fresh vegetables and garnishes, and typically served with lime on the side.",
+      "Noodles are stir-fried over high heat with egg and seasoning, then finished quickly to keep them springy.",
   },
 ]
