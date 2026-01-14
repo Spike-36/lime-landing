@@ -3,17 +3,21 @@
 import { useState, useRef } from "react"
 import { demoItems } from "./demoData"
 import FeaturedFoodScreen from "./FeaturedFoodScreen"
-import DetailView from "./InfoSheet" // ✅ THIS IS THE KEY LINE
+import DetailView from "./InfoSheet"
 
 type Screen = "featured" | "detail"
 
 export default function AppDemo() {
   const [screen, setScreen] = useState<Screen>("featured")
-  const [selectedItem, setSelectedItem] = useState<typeof demoItems[number] | null>(null)
+  const [selectedItem, setSelectedItem] = useState<
+    (typeof demoItems)[number] | null
+  >(null)
+
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const playAudio = (audio: string) => {
     if (!audio) return
+    if (typeof window === "undefined") return
 
     if (!audioRef.current) {
       audioRef.current = new Audio(audio)
@@ -25,7 +29,12 @@ export default function AppDemo() {
     audioRef.current.play().catch(() => {})
   }
 
-  const openDetail = (item: typeof demoItems[number]) => {
+  const openDetail = (item: (typeof demoItems)[number]) => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+    }
+
     setSelectedItem(item)
     setScreen("detail")
   }
@@ -35,6 +44,7 @@ export default function AppDemo() {
       audioRef.current.pause()
       audioRef.current.currentTime = 0
     }
+
     setScreen("featured")
     setSelectedItem(null)
   }
@@ -47,6 +57,7 @@ export default function AppDemo() {
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20" />
 
+          {/* Screen switch */}
           {screen === "featured" && (
             <FeaturedFoodScreen
               items={demoItems}
@@ -61,7 +72,6 @@ export default function AppDemo() {
               onPlayAudio={() => playAudio(selectedItem.audio)}
             />
           )}
-
         </div>
       </div>
     </div>
