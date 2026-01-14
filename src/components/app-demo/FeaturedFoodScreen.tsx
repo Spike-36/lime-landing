@@ -1,6 +1,10 @@
+"use client"
+
+import type { DemoItem } from "./demoData"
+
 type Props = {
-  items: typeof import("./demoData").demoItems
-  onSelect: (item: any) => void
+  items: DemoItem[]
+  onSelect: (item: DemoItem) => void
 }
 
 export default function FeaturedFoodScreen({ items, onSelect }: Props) {
@@ -10,6 +14,7 @@ export default function FeaturedFoodScreen({ items, onSelect }: Props) {
         {items.map((item) => (
           <button
             key={item.id}
+            type="button"
             onClick={() => onSelect(item)}
             className="relative aspect-square overflow-hidden rounded-xl"
           >
