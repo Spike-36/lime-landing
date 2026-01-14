@@ -1,4 +1,17 @@
-export const demoItems = [
+export type DemoItem = {
+  id: string
+  image: string
+  word: string
+  phonetic: string
+  translation: string
+  audio: string
+  description?: string
+  about?: string
+  ingredients?: string[]
+  preparation?: string
+}
+
+export const demoItems: DemoItem[] = [
   {
     id: "butterfly-pea",
     image: "/demo/images/butterfly_pea.jpg",
