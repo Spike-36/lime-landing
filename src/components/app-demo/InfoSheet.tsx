@@ -1,76 +1,83 @@
 "use client"
 
-import { useState, useRef } from "react"
-import { demoItems, type DemoItem } from "./demoData"
-import FeaturedFoodScreen from "./FeaturedFoodScreen"
-import DetailView from "./InfoSheet"
+import type { DemoItem } from "./demoData"
 
-type Screen = "featured" | "detail"
+type Props = {
+  item: DemoItem
+  onBack: () => void
+  onPlayAudio?: () => void
+}
 
-export default function AppDemo() {
-  const [screen, setScreen] = useState<Screen>("featured")
-  const [selectedItem, setSelectedItem] = useState<DemoItem | null>(null)
-
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-
-  const playAudio = (audio: string) => {
-    if (!audio) return
-    if (typeof window === "undefined") return
-
-    if (!audioRef.current) {
-      audioRef.current = new Audio(audio)
-    } else {
-      audioRef.current.src = audio
-    }
-
-    audioRef.current.currentTime = 0
-    audioRef.current.play().catch(() => {})
-  }
-
-  const openDetail = (item: DemoItem) => {
-    if (audioRef.current) {
-      audioRef.current.pause()
-      audioRef.current.currentTime = 0
-    }
-
-    setSelectedItem(item)
-    setScreen("detail")
-  }
-
-  const goBack = () => {
-    if (audioRef.current) {
-      audioRef.current.pause()
-      audioRef.current.currentTime = 0
-    }
-
-    setSelectedItem(null)
-    setScreen("featured")
-  }
-
+export default function DetailView({
+  item,
+  onBack,
+  onPlayAudio,
+}: Props) {
   return (
-    <div className="flex justify-center">
-      <div className="w-[360px] h-[720px] rounded-[2.5rem] bg-black/80 p-1.5 shadow-lg">
-        <div className="relative h-full w-full rounded-[2rem] bg-white overflow-hidden">
+    <div className="absolute inset-0 bg-white overflow-y-auto">
+      <div className="p-4">
+        <button
+          onClick={onBack}
+          className="text-sm text-orange-500 mb-4"
+        >
+          ← Back
+        </button>
 
-          {/* Notch */}
-          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20" />
+        <img
+          src={item.image}
+          alt={item.word}
+          className="w-full rounded-xl mb-4"
+        />
 
-          {screen === "featured" && (
-            <FeaturedFoodScreen
-              items={demoItems}
-              onSelect={openDetail}
-            />
-          )}
+        <h1 className="text-2xl font-semibold">{item.word}</h1>
 
-          {screen === "detail" && selectedItem && (
-            <DetailView
-              item={selectedItem}
-              onBack={goBack}
-              onPlayAudio={() => playAudio(selectedItem.audio)}
-            />
-          )}
+        {onPlayAudio && (
+          <button
+            onClick={onPlayAudio}
+            className="mt-2 text-gray-500"
+          >
+            🔊 Play audio
+          </button>
+        )}
 
-        </div>
+        <p className="mt-2 italic text-orange-500">
+          [{item.phonetic}]
+        </p>
+
+        <p className="mt-4 font-medium">
+          {item.translation}
+        </p>
+
+        {item.description && (
+          <p className="mt-4 text-gray-600">
+            {item.description}
+          </p>
+        )}
+
+        {item.about && (
+          <section className="mt-6">
+            <h3 className="font-semibold mb-1">About</h3>
+            <p>{item.about}</p>
+          </section>
+        )}
+
+        {item.ingredients?.length ? (
+          <section className="mt-6">
+            <h3 className="font-semibold mb-1">Ingredients</h3>
+            <ul className="list-disc pl-5">
+              {item.ingredients.map((ing, i) => (
+                <li key={i}>{ing}</li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {item.preparation && (
+          <section className="mt-6">
+            <h3 className="font-semibold mb-1">Preparation</h3>
+            <p>{item.preparation}</p>
+          </section>
+        )}
       </div>
     </div>
   )
