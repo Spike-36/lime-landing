@@ -4,21 +4,22 @@ const Hero: React.FC = () => {
   return (
     <section className="py-24">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <p className="text-lg font-semibold text-gray-900 mb-4">
-          Launching September 2029
-        </p>
-
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 leading-tight">
-          Enjoy food,<br />
-          travel and learning<br />
-          new words?
+          Great food choices,<br />
+          wherever you travel
         </h1>
 
-        <p className="text-lg text-gray-800">
-          For a limited time, we are offering <br />
-          free access to <span className="font-semibold">YumWords</span><br />
-          in return for your valuable feedback
+        <p className="text-lg text-gray-800 mb-10">
+          Designed to help you choose local food you’ll love<br />
+          before you order
         </p>
+
+        <button
+          type="button"
+          className="inline-flex items-center justify-center rounded-full bg-gray-900 px-8 py-4 text-base font-semibold text-white hover:bg-gray-800 transition"
+        >
+          Try YumWords
+        </button>
       </div>
     </section>
   );

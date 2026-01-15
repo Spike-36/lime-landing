@@ -1,19 +1,21 @@
-// src/components/FeatureIntro.tsx
-
 export default function FeatureIntro() {
   return (
     <section className="px-6 py-10">
-      <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed text-justify">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          What is ?
-        </h2>
-        <p className="mb-4">
-          Yumwords is your personal language companion for food-focused travel.
-          Hear how to say useful words in the local language — fast, fun, and beautifully designed.
+      <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed">
+        <p className="mb-6">
+          When you’re travelling, the hardest part isn’t finding food.
+          <br />
+          It’s choosing what to eat when many things are unfamiliar.
         </p>
-        <p>
-          Whether you’re navigating street food in Osaka or ordering tapas in Madrid,
-          Yumwords gives you the confidence to speak up and savour the experience.
+
+        <p className="mb-6">
+          YumWords doesn’t try to show you everything.
+          <br />
+          It focuses on a small number of local food and drink that are genuinely worth choosing.
+        </p>
+
+        <p className="font-medium">
+          Less browsing. Less guessing. Better meals.
         </p>
       </div>
     </section>
