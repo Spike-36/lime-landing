@@ -1,6 +1,7 @@
+// src/app/site/page.tsx
 import Hero from "@/components/Hero";
-import AppDemo from "@/components/app-demo/AppDemo";
 import ProblemFraming from "@/components/ProblemFraming";
+import DemoSection from "@/components/DemoSection";
 import OutcomeSection from "@/components/OutcomeSection";
 import FeatureRestraint from "@/components/FeatureRestraint";
 import TryYumWords from "@/components/TryYumWords";
@@ -17,9 +18,7 @@ export default function Page() {
       <ProblemFraming />
 
       {/* 3. Product in Motion — Show, don’t explain */}
-      <section className="px-4 py-8">
-        <AppDemo />
-      </section>
+      <DemoSection />
 
       {/* 4. Outcome — Why this matters */}
       <OutcomeSection />
