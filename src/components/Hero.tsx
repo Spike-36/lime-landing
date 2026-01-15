@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="text-lg text-gray-800 mb-10">
-          Designed to help you choose local food you’ll love<br />
+          Designed to help you choose local food you’ll love,<br />
           before you order
         </p>
 
