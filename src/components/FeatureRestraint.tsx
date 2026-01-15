@@ -1,4 +1,3 @@
-// FeatureRestraint – confirmed active
 export default function FeatureRestraint() {
   return (
     <section className="px-6 py-16">
@@ -13,7 +12,7 @@ export default function FeatureRestraint() {
         </p>
 
         <p className="font-medium">
-          It’s designed to help you choose well — not to give you more to read.
+          It’s designed to help you choose well — without the noise.
         </p>
       </div>
     </section>
