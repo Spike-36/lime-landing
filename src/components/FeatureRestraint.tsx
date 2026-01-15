@@ -1,6 +1,6 @@
 export default function FeatureRestraint() {
   return (
-    <section className="px-6 py-16">
+    <section className="px-6 py-14">
       <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed space-y-6">
         {/* Section lead */}
         <p className="font-medium text-gray-900">

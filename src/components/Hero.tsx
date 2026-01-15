@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="py-28">
+    <section className="py-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
         {/* H1 — Orientation */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">
