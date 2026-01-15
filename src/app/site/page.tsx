@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
 import AppDemo from "@/components/app-demo/AppDemo";
-import FeatureIntro from "@/components/FeatureIntro";
-import FeatureHighlight from "@/components/FeatureHighlight";
+import ProblemFraming from "@/components/ProblemFraming";
+import OutcomeSection from "@/components/OutcomeSection";
 import FeatureRestraint from "@/components/FeatureRestraint";
-import TestimonialBlock from "@/components/TestimonialBlock";
-import BetaSignupBlock from "@/components/BetaSignupBlock";
+import TryYumWords from "@/components/TryYumWords";
 import Footer from "@/components/Footer";
 
 export default function Page() {
@@ -15,7 +14,7 @@ export default function Page() {
       <Hero />
 
       {/* 2. Problem Framing — Why choosing food is hard */}
-      <FeatureIntro />
+      <ProblemFraming />
 
       {/* 3. Product in Motion — Show, don’t explain */}
       <section className="px-4 py-8">
@@ -23,16 +22,13 @@ export default function Page() {
       </section>
 
       {/* 4. Outcome — Why this matters */}
-      <FeatureHighlight />
+      <OutcomeSection />
 
       {/* 5. Scope & Restraint — Trust-building */}
       <FeatureRestraint />
 
-      {/* 6. Human Validation — Social proof */}
-      <TestimonialBlock />
-
-      {/* 7. The Ask — Primary CTA */}
-      <BetaSignupBlock />
+      {/* 6. The Ask — Primary CTA */}
+      <TryYumWords />
 
       {/* Footer */}
       <Footer />
