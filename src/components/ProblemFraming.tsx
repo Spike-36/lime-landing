@@ -1,20 +1,23 @@
-export default function FeatureIntro() {
+export default function ProblemFraming() {
   return (
-    <section className="px-6 py-10">
+    <section className="px-6 py-20">
       <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed">
-        <p className="mb-6">
+        {/* Section lead — quiet anchor */}
+        <p className="font-medium text-gray-900 mb-6">
           When you’re travelling, the hardest part isn’t finding food.
           <br />
           It’s choosing what to eat when many things are unfamiliar.
         </p>
 
+        {/* Body text */}
         <p className="mb-6">
           YumWords doesn’t try to show you everything.
           <br />
           It focuses on a small number of local food and drink that are genuinely worth choosing.
         </p>
 
-        <p className="font-medium">
+        {/* Emphasis — hinge line */}
+        <p className="font-semibold text-gray-900">
           Less browsing. Less guessing. Better meals.
         </p>
       </div>
