@@ -4,6 +4,7 @@ import ProblemFraming from "@/components/ProblemFraming";
 import DemoSection from "@/components/DemoSection";
 import OutcomeSection from "@/components/OutcomeSection";
 import FeatureRestraint from "@/components/FeatureRestraint";
+import HumanValidation from "@/components/HumanValidation";
 import TryYumWords from "@/components/TryYumWords";
 import Footer from "@/components/Footer";
 
@@ -26,7 +27,10 @@ export default function Page() {
       {/* 5. Scope & Restraint — Trust-building */}
       <FeatureRestraint />
 
-      {/* 6. The Ask — Primary CTA */}
+      {/* 6. Human validation — reassurance */}
+      <HumanValidation />
+
+      {/* 7. The Ask — Primary CTA */}
       <TryYumWords />
 
       {/* Footer */}
