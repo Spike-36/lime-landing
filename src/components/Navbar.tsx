@@ -14,6 +14,8 @@ export default function Navbar() {
       }
     }
 
+
+
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     }
@@ -24,7 +26,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="relative flex items-center justify-between px-6 py-4 border-b">
+    <nav className="relative flex items-center justify-between px-6 py-3 md:py-4 border-b">
       {/* Brand */}
       <Link href="/" className="text-xl font-bold">
         YumWords
@@ -45,7 +47,7 @@ export default function Navbar() {
       {open && (
         <div
           ref={menuRef}
-          className="absolute right-6 top-full mt-2 w-40 rounded-md border bg-white shadow-md z-50"
+          className="absolute right-6 top-full mt-1.5 w-40 rounded-md border bg-white shadow-md z-50"
         >
           <ul className="flex flex-col py-2 text-sm">
             <li>
