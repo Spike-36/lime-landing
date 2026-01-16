@@ -10,8 +10,8 @@ export default function ProblemFraming() {
 
         {/* Body text */}
         <p className="mb-6 md:mb-8">
-          YumWords doesn’t try to show you everything.
-          It focuses on a small number of local food and drink that are genuinely worth choosing.
+          YumWords doesn’t try to show you everything. 
+          It focuses on what matters — local food and drink that are genuinely worth choosing.
         </p>
 
         {/* Emphasis — hinge line */}

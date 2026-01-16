@@ -9,13 +9,12 @@ export default function HumanValidation() {
 
         {/* Body */}
         <p className="mb-5 md:mb-6">
-          They want to eat well when they travel — they don’t want to guess.
+          They want to eat well when they travel — they don’t want to leave it to chance.
         </p>
 
         {/* Reassurance — supportive close */}
         <p>
-          YumWords helps them feel confident in what they’re choosing,
-          so meals become something to look forward to.
+          YumWords helps you feel confident about what you’re choosing.
         </p>
       </div>
     </section>
