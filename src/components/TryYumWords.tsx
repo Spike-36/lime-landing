@@ -16,14 +16,14 @@ export default function BetaSignupBlock() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             type="button"
-            className="w-full sm:w-auto rounded-full bg-gray-900 px-8 py-4 text-white font-medium hover:bg-gray-800 transition"
+            className="w-full sm:w-auto rounded-full bg-green-700 px-8 py-4 text-white font-medium hover:bg-green-600 transition"
           >
             App Store
           </button>
 
           <button
             type="button"
-            className="w-full sm:w-auto rounded-full bg-gray-900 px-8 py-4 text-white font-medium hover:bg-gray-800 transition"
+            className="w-full sm:w-auto rounded-full bg-green-700 px-8 py-4 text-white font-medium hover:bg-green-600 transition"
           >
             Google Play
           </button>

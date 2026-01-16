@@ -4,79 +4,44 @@ import type { DemoItem } from "./demoData"
 
 type Props = {
   item: DemoItem
-  onBack: () => void
-  onPlayAudio?: () => void
 }
 
-export default function DetailView({
-  item,
-  onBack,
-  onPlayAudio,
-}: Props) {
+export default function InfoSheet({ item }: Props) {
   return (
     <div className="absolute inset-0 bg-white overflow-y-auto">
-      <div className="p-4">
-        <button
-          onClick={onBack}
-          className="text-sm text-orange-500 mb-4"
-        >
-          ← Back
-        </button>
-
+      
+      {/* Image — 1:1, calm, contained */}
+      <div className="w-full aspect-square max-h-[45vh] overflow-hidden">
         <img
           src={item.image}
           alt={item.word}
-          className="w-full rounded-xl mb-4"
+          className="w-full h-full object-cover"
         />
+      </div>
 
-        <h1 className="text-2xl font-semibold">{item.word}</h1>
+      <div className="p-5">
+        {/* Dish name */}
+        <h1 className="text-[21px] font-medium leading-tight">
+          {item.word}
+        </h1>
 
-        {onPlayAudio && (
-          <button
-            onClick={onPlayAudio}
-            className="mt-2 text-gray-500"
-          >
-            🔊 Play audio
-          </button>
-        )}
-
-        <p className="mt-2 italic text-orange-500">
-          [{item.phonetic}]
-        </p>
-
-        <p className="mt-4 font-medium">
-          {item.translation}
-        </p>
-
-        {item.description && (
-          <p className="mt-4 text-gray-600">
-            {item.description}
+        {/* Phonetic — present but de-emphasised */}
+        {item.phonetic && (
+          <p className="mt-1 text-[13px] text-gray-400">
+            {item.phonetic}
           </p>
         )}
 
-        {item.about && (
-          <section className="mt-6">
-            <h3 className="font-semibold mb-1">About</h3>
-            <p>{item.about}</p>
-          </section>
-        )}
+        {/* Main reassurance paragraph */}
+        <p className="mt-5 text-[15px] leading-relaxed text-gray-700">
+          {item.demoText}
+        </p>
 
-        {item.ingredients?.length ? (
-          <section className="mt-6">
-            <h3 className="font-semibold mb-1">Ingredients</h3>
-            <ul className="list-disc pl-5">
-              {item.ingredients.map((ing, i) => (
-                <li key={i}>{ing}</li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
-
-        {item.preparation && (
-          <section className="mt-6">
-            <h3 className="font-semibold mb-1">Preparation</h3>
-            <p>{item.preparation}</p>
-          </section>
+        {/* Context line */}
+        {item.context && (
+          <p className="mt-4 text-[13px] text-gray-500">
+            {item.context}
+          </p>
         )}
       </div>
     </div>

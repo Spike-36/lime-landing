@@ -16,10 +16,10 @@ const Hero: React.FC = () => {
           before you order
         </p>
 
-        {/* CTA — visual placeholder (no accent colour yet) */}
+        {/* CTA — primary action (deep sage) */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-gray-900 px-8 py-4 text-base font-semibold text-gray-900 hover:bg-gray-100 transition"
+          className="inline-flex items-center justify-center rounded-full bg-green-700 px-8 py-4 text-base font-semibold text-white hover:bg-green-600 transition"
         >
           Try YumWords
         </button>

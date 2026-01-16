@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { demoItems } from "./demoData"
 import FeaturedFoodScreen from "./FeaturedFoodScreen"
-import DetailView from "./InfoSheet"
+import InfoSheet from "./InfoSheet"
 
 type Screen = "featured" | "detail"
 
@@ -13,44 +13,36 @@ export default function AppDemo() {
     (typeof demoItems)[number] | null
   >(null)
 
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-
-  const playAudio = (audio: string) => {
-    if (!audio) return
-    if (typeof window === "undefined") return
-
-    if (!audioRef.current) {
-      audioRef.current = new Audio(audio)
-    } else {
-      audioRef.current.src = audio
-    }
-
-    audioRef.current.currentTime = 0
-    audioRef.current.play().catch(() => {})
-  }
+  const demoRef = useRef<HTMLDivElement | null>(null)
 
   const openDetail = (item: (typeof demoItems)[number]) => {
-    if (audioRef.current) {
-      audioRef.current.pause()
-      audioRef.current.currentTime = 0
-    }
-
     setSelectedItem(item)
     setScreen("detail")
   }
 
-  const goBack = () => {
-    if (audioRef.current) {
-      audioRef.current.pause()
-      audioRef.current.currentTime = 0
-    }
+  // Reset demo when it leaves the viewport
+  useEffect(() => {
+    const node = demoRef.current
+    if (!node) return
 
-    setScreen("featured")
-    setSelectedItem(null)
-  }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setScreen("featured")
+          setSelectedItem(null)
+        }
+      },
+      {
+        threshold: 0,
+      }
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div className="flex justify-center">
+    <div ref={demoRef} className="flex justify-center">
       <div className="w-[360px] h-[720px] rounded-[2.5rem] bg-black/80 p-1.5 shadow-lg">
         <div className="relative h-full w-full rounded-[2rem] bg-white overflow-hidden">
 
@@ -66,11 +58,7 @@ export default function AppDemo() {
           )}
 
           {screen === "detail" && selectedItem && (
-            <DetailView
-              item={selectedItem}
-              onBack={goBack}
-              onPlayAudio={() => playAudio(selectedItem.audio)}
-            />
+            <InfoSheet item={selectedItem} />
           )}
         </div>
       </div>
