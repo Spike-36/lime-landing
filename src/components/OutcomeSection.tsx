@@ -1,10 +1,10 @@
 export default function OutcomeSection() {
   return (
-    <section className="bg-gray-50 px-6 py-8 md:py-14">
+    <section className="bg-neutral-100 px-6 py-8 md:py-14">
       <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed">
         {/* Section lead — quiet anchor */}
         <p className="font-medium text-gray-900 mb-2 md:mb-3">
-          When you’re travelling, you only have so many chances to eat and drink well.
+          You only have so many chances to eat and drink well.
         </p>
 
         {/* Emphasis — hinge sentence */}

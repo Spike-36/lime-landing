@@ -1,6 +1,6 @@
 export default function HumanValidation() {
   return (
-    <section className="px-6 py-8 md:py-14 bg-gray-50">
+    <section className="px-6 py-8 md:py-14 bg-neutral-100">
       <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed">
         {/* Section lead — quiet social proof */}
         <p className="font-medium text-gray-900 mb-3 md:mb-4">
