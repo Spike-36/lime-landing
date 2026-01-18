@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
         </h1>
 
         <p className="mb-6 text-sm">
-          <strong>Effective Date:</strong> November 2025
+          <strong>Effective Date:</strong> January 2026
         </p>
 
         <p className="mb-6">

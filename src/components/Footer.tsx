@@ -2,42 +2,19 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-600 text-sm px-6 py-8 mt-16 border-t border-gray-200">
-      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-        <p>© {new Date().getFullYear()} YumWords — All rights reserved</p>
+    <footer className="bg-white border-t border-gray-200 text-gray-500 text-xs px-6 py-8 mt-16">
+      <div className="max-w-4xl mx-auto flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+        <p>
+          © {new Date().getFullYear()} YumWords. All rights reserved.
+        </p>
 
-        <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-          <Link href="/services">
-            <span className="hover:text-black">Services</span>
+        <div className="flex items-center gap-4">
+          <Link href="/privacy" className="hover:text-gray-800">
+            Privacy Policy
           </Link>
-          <Link href="/projects">
-            <span className="hover:text-black">Projects</span>
+          <Link href="/contact" className="hover:text-gray-800">
+            Contact
           </Link>
-          <Link href="/technical">
-            <span className="hover:text-black">Technical</span>
-          </Link>
-          <Link href="/contact">
-            <span className="hover:text-black">Contact</span>
-          </Link>
-          <Link href="/privacy">
-            <span className="hover:text-black">Privacy</span>
-          </Link>
-          <a
-            href="https://github.com/Spike-36"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-black"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/your-link-here/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-black"
-          >
-            LinkedIn
-          </a>
         </div>
       </div>
     </footer>

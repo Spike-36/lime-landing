@@ -14,8 +14,6 @@ export default function Navbar() {
       }
     }
 
-
-
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     }
@@ -26,15 +24,15 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="relative flex items-center justify-between px-6 py-3 md:py-4 border-b">
+    <nav className="relative flex items-center justify-between px-6 py-3 md:py-4 border-b border-gray-200 bg-white">
       {/* Brand */}
-      <Link href="/" className="text-xl font-bold">
+      <Link href="/" className="text-xl font-semibold">
         YumWords
       </Link>
 
-      {/* Hamburger */}
+      {/* Hamburger (utility menu only) */}
       <button
-        aria-label="Toggle menu"
+        aria-label="Open menu"
         onClick={() => setOpen((v) => !v)}
         className="flex flex-col justify-center items-center w-8 h-8 space-y-1"
       >
@@ -43,20 +41,20 @@ export default function Navbar() {
         <span className="block w-6 h-0.5 bg-gray-900" />
       </button>
 
-      {/* Dropdown menu */}
+      {/* Dropdown */}
       {open && (
         <div
           ref={menuRef}
-          className="absolute right-6 top-full mt-1.5 w-40 rounded-md border bg-white shadow-md z-50"
+          className="absolute right-6 top-full mt-2 w-44 rounded-md border border-gray-200 bg-white shadow-md z-50"
         >
-          <ul className="flex flex-col py-2 text-sm">
+          <ul className="flex flex-col py-1 text-sm">
             <li>
               <Link
                 href="/privacy"
                 className="block px-4 py-2 hover:bg-gray-100"
                 onClick={() => setOpen(false)}
               >
-                Privacy
+                Privacy Policy
               </Link>
             </li>
             <li>
