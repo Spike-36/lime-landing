@@ -1,75 +1,44 @@
-export const metadata = {
-  title: "YumWords – Privacy Policy",
-};
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import ProblemFraming from "@/components/ProblemFraming";
+import DemoSection from "@/components/DemoSection";
+import OutcomeSection from "@/components/OutcomeSection";
+import FeatureRestraint from "@/components/FeatureRestraint";
+import HumanValidation from "@/components/HumanValidation";
+import TryYumWords from "@/components/TryYumWords";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-[#fafafa] px-4 py-10 text-gray-900">
-      <div className="mx-auto max-w-3xl rounded-xl bg-white p-8 shadow-sm">
+    <main className="bg-white text-gray-900 min-h-screen flex flex-col">
 
-        {/* Under construction notice */}
-        <div className="mb-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-700">
-          <strong>YumWords is currently under development.</strong>
-          <br />
-          This site is temporarily serving our Privacy Policy for app store compliance.
-        </div>
+      {/* Global navigation */}
+      <Navbar />
 
-        {/* Privacy Policy */}
-        <h1 className="mb-4 text-3xl font-semibold">
-          YumWords – Privacy Policy
-        </h1>
+      {/* 1. Hero — Orientation */}
+      <Hero />
 
-        <p className="mb-4">
-          <strong>Effective Date:</strong> November 2025
-        </p>
+      {/* 2. Problem Framing — Why choosing food is hard */}
+      <ProblemFraming />
 
-        <p className="mb-6">
-          YumWords is a completely offline learning app. It does not collect,
-          store, transmit, or share any personal data.
-        </p>
+      {/* 3. Product in Motion — Show, don’t explain */}
+      <DemoSection />
 
-        <h2 className="mt-8 mb-2 text-xl font-semibold">
-          1. No Data Collected
-        </h2>
-        <p>
-          YumWords does not collect any personal information, usage data,
-          analytics data, or device identifiers.
-        </p>
+      {/* 4. Outcome — Why this matters */}
+      <OutcomeSection />
 
-        <h2 className="mt-8 mb-2 text-xl font-semibold">
-          2. No Internet Connection
-        </h2>
-        <p>
-          The app operates fully offline once installed. It sends no data to
-          external servers and does not communicate over the internet.
-        </p>
+      {/* 5. Scope & Restraint — Trust-building */}
+      <FeatureRestraint />
 
-        <h2 className="mt-8 mb-2 text-xl font-semibold">
-          3. No Third-Party Services
-        </h2>
-        <p>
-          The app does not use analytics, advertising SDKs, crash reporting,
-          tracking tools, or third-party data processors.
-        </p>
+      {/* 6. Human validation — reassurance */}
+      <HumanValidation />
 
-        <h2 className="mt-8 mb-2 text-xl font-semibold">
-          4. No User Accounts
-        </h2>
-        <p>
-          YumWords does not require registration, login, or any user-provided
-          information.
-        </p>
+      {/* 7. The Ask — Primary CTA */}
+      <TryYumWords />
 
-        <h2 className="mt-8 mb-2 text-xl font-semibold">
-          5. Contact
-        </h2>
-        <p>
-          For any inquiries about this policy, you may contact the developer at:
-          <br />
-          <strong>support@yumwords.com</strong>
-        </p>
+      {/* Footer */}
+      <Footer />
 
-      </div>
     </main>
   );
 }
