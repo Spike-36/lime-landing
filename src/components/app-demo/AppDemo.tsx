@@ -1,21 +1,24 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { demoItems } from "./demoData"
+import { getDemoItems } from "./demoData"
 import FeaturedFoodScreen from "./FeaturedFoodScreen"
 import InfoSheet from "./InfoSheet"
 
 type Screen = "featured" | "detail"
+type Variant = "lime" | "cheese"
 
-export default function AppDemo() {
+export default function AppDemo({ variant = "lime" }: { variant?: Variant }) {
+  const items = getDemoItems(variant)
+
   const [screen, setScreen] = useState<Screen>("featured")
   const [selectedItem, setSelectedItem] = useState<
-    (typeof demoItems)[number] | null
+    (typeof items)[number] | null
   >(null)
 
   const demoRef = useRef<HTMLDivElement | null>(null)
 
-  const openDetail = (item: (typeof demoItems)[number]) => {
+  const openDetail = (item: (typeof items)[number]) => {
     setSelectedItem(item)
     setScreen("detail")
   }
@@ -52,7 +55,7 @@ export default function AppDemo() {
           {/* Screen switch */}
           {screen === "featured" && (
             <FeaturedFoodScreen
-              items={demoItems}
+              items={items}
               onSelect={openDetail}
             />
           )}

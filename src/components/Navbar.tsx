@@ -2,8 +2,12 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isCheese = pathname.startsWith("/cheese");
+
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -25,12 +29,22 @@ export default function Navbar() {
 
   return (
     <nav className="relative flex items-center justify-between px-6 py-3 md:py-4 border-b border-gray-200 bg-white">
+      
       {/* Brand */}
-      <Link href="/" className="text-xl font-semibold">
-        YumWords
+      <Link href={isCheese ? "/cheese" : "/"} className="flex items-baseline gap-2">
+        
+        <span className="text-xl font-semibold">
+          {isCheese ? "Cheese" : "YumWords"}
+        </span>
+
+        {isCheese && (
+          <span className="text-xs text-gray-500">
+            by YumWords
+          </span>
+        )}
       </Link>
 
-      {/* Hamburger (utility menu only) */}
+      {/* Hamburger */}
       <button
         aria-label="Open menu"
         onClick={() => setOpen((v) => !v)}
