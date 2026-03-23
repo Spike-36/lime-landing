@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
 
         {/* Section lead — quiet anchor */}
         <p className="text-lg font-medium text-gray-900 mb-8">
-          Designed to help you choose local food you’ll love,
+          Designed to help you choose local food you’ll LOVE,
           <br />
           before you order
         </p>
