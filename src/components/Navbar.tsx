@@ -2,12 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const isCheese = pathname.startsWith("/cheese");
-
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,19 +25,14 @@ export default function Navbar() {
 
   return (
     <nav className="relative flex items-center justify-between px-6 py-3 md:py-4 border-b border-gray-200 bg-white">
-      
+
       {/* Brand */}
-      <Link href={isCheese ? "/cheese" : "/"} className="flex items-baseline gap-2">
-        
+      <Link href="/" className="flex items-baseline gap-2">
+
         <span className="text-xl font-semibold">
-          {isCheese ? "Cheese" : "YumWords"}
+          YumWords
         </span>
 
-        {isCheese && (
-          <span className="text-xs text-gray-500">
-            by YumWords
-          </span>
-        )}
       </Link>
 
       {/* Hamburger */}
@@ -62,6 +53,41 @@ export default function Navbar() {
           className="absolute right-6 top-full mt-2 w-44 rounded-md border border-gray-200 bg-white shadow-md z-50"
         >
           <ul className="flex flex-col py-1 text-sm">
+
+            <li>
+              <Link
+                href="/asia"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={() => setOpen(false)}
+              >
+                YumWords Asia
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/france"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={() => setOpen(false)}
+              >
+                YumWords France
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/cheese"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={() => setOpen(false)}
+              >
+                YumWords Cheese
+              </Link>
+            </li>
+
+            <li>
+              <hr className="my-1 border-gray-200" />
+            </li>
+
             <li>
               <Link
                 href="/privacy"
@@ -71,6 +97,7 @@ export default function Navbar() {
                 Privacy Policy
               </Link>
             </li>
+
             <li>
               <Link
                 href="/contact"
@@ -80,6 +107,7 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
+
           </ul>
         </div>
       )}
