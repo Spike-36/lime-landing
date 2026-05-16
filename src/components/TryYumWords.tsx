@@ -2,9 +2,13 @@
 
 import React from "react";
 
-type Variant = "lime" | "cheese";
+type Variant = "yumwords" | "asia" | "france" | "cheese";
 
-export default function TryYumWords({ variant = "lime" }: { variant?: Variant }) {
+export default function TryYumWords({
+  variant = "yumwords",
+}: {
+  variant?: Variant;
+}) {
   const content =
     variant === "cheese"
       ? {
@@ -15,13 +19,31 @@ export default function TryYumWords({ variant = "lime" }: { variant?: Variant })
           bg: "bg-black",
           hover: "hover:bg-gray-800",
         }
-      : {
-          title: "Try YumWords",
+      : variant === "france"
+      ? {
+          title: "Cook, learn, and explore France",
+          body: "French food, recipes, and language learning in one experience.",
+          button: "Coming soon",
+          href: "#",
+          bg: "bg-blue-700",
+          hover: "hover:bg-blue-600",
+        }
+      : variant === "asia"
+      ? {
+          title: "Try YumWords Asia",
           body: "Available now on the App Store. Android coming soon.",
           button: "Download on the App Store",
           href: "https://apps.apple.com/gb/app/yumwords-thailand/id6754214751",
           bg: "bg-green-700",
           hover: "hover:bg-green-600",
+        }
+      : {
+          title: "Explore the YumWords apps",
+          body: "Food, language, travel, and culture — through practical experiences.",
+          button: "Explore YumWords",
+          href: "#",
+          bg: "bg-gray-900",
+          hover: "hover:bg-gray-800",
         };
 
   return (

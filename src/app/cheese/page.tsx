@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import TryYumWords from "@/components/TryYumWords";
 
 export default function Page() {
-  const variant: "lime" | "cheese" = "cheese";
+  const variant: "yumwords" | "asia" | "france" | "cheese" = "cheese";
 
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col">
@@ -24,6 +24,7 @@ export default function Page() {
       <OutcomeSection />
 
       <FeatureRestraint />
+
       <HumanValidation />
 
       <TryYumWords variant={variant} />

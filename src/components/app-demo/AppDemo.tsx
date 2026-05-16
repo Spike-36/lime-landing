@@ -6,10 +6,17 @@ import FeaturedFoodScreen from "./FeaturedFoodScreen"
 import InfoSheet from "./InfoSheet"
 
 type Screen = "featured" | "detail"
-type Variant = "lime" | "cheese"
+type Variant = "yumwords" | "asia" | "france" | "cheese"
 
-export default function AppDemo({ variant = "lime" }: { variant?: Variant }) {
-  const items = getDemoItems(variant)
+export default function AppDemo({
+  variant = "yumwords",
+}: {
+  variant?: Variant
+}) {
+  const demoVariant =
+    variant === "yumwords" ? "asia" : variant
+
+  const items = getDemoItems(demoVariant)
 
   const [screen, setScreen] = useState<Screen>("featured")
   const [selectedItem, setSelectedItem] = useState<
