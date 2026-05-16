@@ -2,13 +2,13 @@
 
 import React from "react";
 
-type Variant = "lime" | "cheese";
+type Variant = "yumwords" | "asia" | "france" | "cheese";
 
 interface HeroProps {
   variant?: Variant;
 }
 
-const Hero: React.FC<HeroProps> = ({ variant = "lime" }) => {
+const Hero: React.FC<HeroProps> = ({ variant = "yumwords" }) => {
   const content =
     variant === "cheese"
       ? {
@@ -28,7 +28,26 @@ const Hero: React.FC<HeroProps> = ({ variant = "lime" }) => {
           ),
           cta: "Explore Cheese",
         }
-      : {
+      : variant === "france"
+      ? {
+          title: (
+            <>
+              Learn French through
+              <br />
+              cooking and food
+            </>
+          ),
+          subtitle: (
+            <>
+              Discover authentic French dishes,
+              <br />
+              recipes, and food language
+            </>
+          ),
+          cta: "Explore France",
+        }
+      : variant === "asia"
+      ? {
           title: (
             <>
               Great food choices,
@@ -43,14 +62,35 @@ const Hero: React.FC<HeroProps> = ({ variant = "lime" }) => {
               before you order
             </>
           ),
-          cta: "Try YumWords",
+          cta: "Explore Asia",
+        }
+      : {
+          title: (
+            <>
+              Explore the YumWords
+              <br />
+              food discovery apps
+            </>
+          ),
+          subtitle: (
+            <>
+              Language, food, travel, and culture —
+              <br />
+              through practical everyday experiences
+            </>
+          ),
+          cta: "Explore YumWords",
         };
 
   // 👉 Variant-driven button styling
   const buttonStyles =
     variant === "cheese"
       ? "bg-cheese-black hover:bg-cheese-amber text-white"
-      : "bg-green-700 hover:bg-green-600 text-white";
+      : variant === "france"
+      ? "bg-blue-700 hover:bg-blue-600 text-white"
+      : variant === "asia"
+      ? "bg-green-700 hover:bg-green-600 text-white"
+      : "bg-gray-900 hover:bg-gray-800 text-white";
 
   return (
     <section className="py-14 md:py-20">
