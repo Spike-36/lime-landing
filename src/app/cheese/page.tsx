@@ -17,7 +17,7 @@ export default function Page() {
 
       <Hero variant={variant} />
 
-      <ProblemFraming />
+      <ProblemFraming variant={variant} />
 
       <DemoSection variant={variant} />
 

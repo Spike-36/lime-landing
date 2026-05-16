@@ -1,14 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProblemFraming from "@/components/ProblemFraming";
-import DemoSection from "@/components/DemoSection";
-import OutcomeSection from "@/components/OutcomeSection";
-import FeatureRestraint from "@/components/FeatureRestraint";
-import HumanValidation from "@/components/HumanValidation";
-import TryYumWords from "@/components/TryYumWords";
+import ExploreAppsSection from "@/components/ExploreAppsSection";
+import WhyYumWordsSection from "@/components/WhyYumWordsSection";
+import JourneySection from "@/components/JourneySection";
+import ExploreYumWordsSection from "@/components/ExploreYumWordsSection";
 import Footer from "@/components/Footer";
 
 export default function Page() {
+  const variant = "yumwords";
+
   return (
     <main className="bg-white text-gray-900 min-h-screen flex flex-col">
 
@@ -16,25 +17,22 @@ export default function Page() {
       <Navbar />
 
       {/* 1. Hero — YumWords umbrella landing */}
-      <Hero variant="yumwords" />
+      <Hero variant={variant} />
 
-      {/* 2. Problem Framing — Why choosing food is hard */}
-      <ProblemFraming />
+      {/* 2. Problem Framing */}
+      <ProblemFraming variant={variant} />
 
-      {/* 3. Product in Motion — Show, don’t explain */}
-      <DemoSection />
+      {/* 3. Explore the YumWords apps */}
+      <ExploreAppsSection />
 
-      {/* 4. Outcome — Why this matters */}
-      <OutcomeSection />
+      {/* 4. Why YumWords exists */}
+      <WhyYumWordsSection />
 
-      {/* 5. Scope & Restraint — Trust-building */}
-      <FeatureRestraint />
+      {/* 5. Project journey */}
+      <JourneySection />
 
-      {/* 6. Human validation — reassurance */}
-      <HumanValidation />
-
-      {/* 7. The Ask — Primary CTA */}
-      <TryYumWords />
+      {/* 6. Explore CTA */}
+      <ExploreYumWordsSection />
 
       {/* Footer */}
       <Footer />
