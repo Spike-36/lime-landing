@@ -29,8 +29,8 @@ export default function ExploreAppsSection() {
   ];
 
   return (
-    <section className="px-6 py-14 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto">
+  <section className="px-6 pt-4 pb-14 md:pt-6 md:pb-20 bg-white">
+      <div className="max-w-4xl mx-auto">
 
         {/* Section intro */}
         <div className="max-w-3xl mb-12">
@@ -54,7 +54,7 @@ export default function ExploreAppsSection() {
             >
 
               {/* Interactive demo */}
-              <div className="mb-4 scale-[0.68] origin-top">
+              <div className="mb-[-200px] scale-[0.56] origin-top">
                 <AppDemo variant={app.variant} />
               </div>
 

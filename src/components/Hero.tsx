@@ -66,17 +66,21 @@ const Hero: React.FC<HeroProps> = ({ variant = "yumwords" }) => {
         }
       : {
           title: (
-        <>
-          Travel well, eat better
-        </>
-      ),
-      subtitle: (
-        <>
-          Simple food and language apps for curious travellers
-        
-        </>
-      ),
-      cta: "Try Yumwords",
+            <>
+              Travel well, eat better
+            </>
+          ),
+          subtitle: (
+            <>
+              Simple food and language apps for curious people
+            </>
+          ),
+          tagline: (
+            <>
+              Helping travellers eat beyond the tourist menu.
+            </>
+          ),
+          cta: "Try YumWords",
         };
 
   // 👉 Variant-driven button styling
@@ -90,18 +94,25 @@ const Hero: React.FC<HeroProps> = ({ variant = "yumwords" }) => {
       : "bg-gray-900 hover:bg-gray-800 text-white";
 
   return (
-    <section className="py-14 md:py-20">
+    <section className="py-10 md:py-14">
       <div className="max-w-3xl mx-auto px-6 text-center">
 
         {/* H1 — Orientation */}
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
           {content.title}
         </h1>
 
-        {/* Section lead — quiet anchor */}
-        <p className="text-lg font-medium text-gray-900 mb-8">
+        {/* 👉 Subtitle */}
+        <p className="text-xl md:text-2xl font-medium text-gray-900 mb-4 leading-relaxed">
           {content.subtitle}
         </p>
+
+        {/* 👉 Tagline */}
+        {"tagline" in content && content.tagline && (
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            {content.tagline}
+          </p>
+        )}
 
         {/* CTA */}
         <button

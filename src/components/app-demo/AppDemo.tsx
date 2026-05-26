@@ -30,6 +30,12 @@ export default function AppDemo({
     setScreen("detail")
   }
 
+  // 👉 Back to main demo screen
+  const goBack = () => {
+    setScreen("featured")
+    setSelectedItem(null)
+  }
+
   // Reset demo when it leaves the viewport
   useEffect(() => {
     const node = demoRef.current
@@ -68,7 +74,10 @@ export default function AppDemo({
           )}
 
           {screen === "detail" && selectedItem && (
-            <InfoSheet item={selectedItem} />
+            <InfoSheet
+              item={selectedItem}
+              onBack={goBack}
+            />
           )}
         </div>
       </div>

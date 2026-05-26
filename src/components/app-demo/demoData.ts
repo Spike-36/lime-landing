@@ -3,6 +3,7 @@ export type DemoItem = {
   image: string
   word: string
   phonetic?: string
+  audio?: string
   demoText: string
   context?: string
 }
@@ -15,6 +16,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "brie",
         image: "/demo/images/brie.jpg",
+        audio: "",
         word: "Brie",
         phonetic: "bree",
         demoText:
@@ -25,6 +27,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "camembert",
         image: "/demo/images/camembert.jpg",
+        audio: "",
         word: "Camembert",
         phonetic: "ka-mom-bair",
         demoText:
@@ -35,6 +38,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "comte",
         image: "/demo/images/comte.jpg",
+        audio: "",
         word: "Comté",
         phonetic: "com-tay",
         demoText:
@@ -45,6 +49,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "reblochon",
         image: "/demo/images/reblochon.jpg",
+        audio: "",
         word: "Reblochon",
         phonetic: "reh-blo-shon",
         demoText:
@@ -55,6 +60,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "roquefort",
         image: "/demo/images/roquefort.jpg",
+        audio: "",
         word: "Roquefort",
         phonetic: "rock-for",
         demoText:
@@ -71,6 +77,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "coq-au-vin",
         image: "/demo/images/coq_au_vin.jpg",
+        audio: "",
         word: "Coq au Vin",
         phonetic: "cock oh van",
         demoText:
@@ -81,6 +88,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       {
         id: "croissant",
         image: "/demo/images/croissant.jpg",
+        audio: "",
         word: "Croissant",
         phonetic: "kwah-son",
         demoText:
@@ -96,6 +104,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
     {
       id: "pad-thai",
       image: "/demo/images/pad_thai.jpg",
+      audio: "/demo/audio/pad_thai.mp3",
       word: "ผัดไทย",
       phonetic: "pàt tai",
       demoText:
@@ -106,6 +115,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
     {
       id: "green-curry",
       image: "/demo/images/green_curry.jpg",
+      audio: "",
       word: "แกงเขียวหวาน",
       phonetic: "gaeng khĭeow wăan",
       demoText:
@@ -116,6 +126,7 @@ export function getDemoItems(variant: Variant): DemoItem[] {
     {
       id: "look-chin",
       image: "/demo/images/look_chin.jpg",
+      audio: "",
       word: "ลูกชิ้น",
       phonetic: "look CHIN",
       demoText:

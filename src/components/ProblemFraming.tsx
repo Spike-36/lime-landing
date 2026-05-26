@@ -43,8 +43,8 @@ export default function ProblemFraming({
         };
 
   return (
-    <section className="px-6 py-8 md:py-14">
-      <div className="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed">
+    <section className="px-6 py-6 md:py-10">
+      <div className="max-w-4xl mx-auto text-lg text-gray-800 leading-relaxed">
 
         {/* Section lead — quiet anchor */}
         <p className="font-medium text-gray-900 mb-3 md:mb-4">
