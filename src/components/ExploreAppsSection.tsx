@@ -1,3 +1,5 @@
+import AppDemo from "./app-demo/AppDemo";
+
 export default function ExploreAppsSection() {
   const apps = [
     {
@@ -6,7 +8,7 @@ export default function ExploreAppsSection() {
         "Discover local food and drink more confidently while travelling across Asia.",
       href: "/asia",
       button: "Explore Asia",
-      image: "/demo/images/pad_thai.jpg",
+      variant: "asia" as const,
     },
     {
       title: "YumWords France",
@@ -14,7 +16,7 @@ export default function ExploreAppsSection() {
         "Learn French food, recipes, and language through practical everyday cooking.",
       href: "/france",
       button: "Explore France",
-      image: "/demo/images/coq_au_vin.jpg",
+      variant: "france" as const,
     },
     {
       title: "YumWords Cheese",
@@ -22,13 +24,13 @@ export default function ExploreAppsSection() {
         "Understand French and European cheese more clearly and choose with confidence.",
       href: "/cheese",
       button: "Explore Cheese",
-      image: "/demo/images/brie.jpg",
+      variant: "cheese" as const,
     },
   ];
 
   return (
     <section className="px-6 py-14 md:py-20 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* Section intro */}
         <div className="max-w-3xl mb-12">
@@ -43,27 +45,23 @@ export default function ExploreAppsSection() {
         </div>
 
         {/* App cards */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-12 lg:grid-cols-3">
 
           {apps.map((app) => (
             <div
               key={app.title}
-              className="border border-gray-200 rounded-3xl overflow-hidden bg-white shadow-sm"
+              className="flex flex-col items-center"
             >
 
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={app.image}
-                  alt={app.title}
-                  className="w-full h-full object-cover"
-                />
+              {/* Interactive demo */}
+              <div className="mb-8 scale-[0.82] origin-top">
+                <AppDemo variant={app.variant} />
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="w-full max-w-sm text-center">
 
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   {app.title}
                 </h3>
 
