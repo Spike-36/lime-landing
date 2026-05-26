@@ -54,7 +54,7 @@ export default function ExploreAppsSection() {
             >
 
               {/* Interactive demo */}
-              <div className="mb-8 scale-[0.82] origin-top">
+              <div className="mb-4 scale-[0.68] origin-top">
                 <AppDemo variant={app.variant} />
               </div>
 
