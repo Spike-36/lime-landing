@@ -5,59 +5,29 @@ export default function WhyYumWordsSection() {
 
         {/* Section heading */}
         <div className="mb-10 md:mb-14">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-            Why YumWords exists
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 leading-tight">
+            Exploring local food should be easy.
+            <br />
+            Enjoying it – even easier.
           </h2>
 
+          <p className="text-lg text-gray-800 leading-relaxed mb-6">
+            The amount of information about food, travel and language is already colossal
+            and it’s growing all the time. But it’s also spread across multiple platforms,
+            searches, lists and folders. Searching for this kind of information from home
+            is already overwhelming – actually applying it on your travels, in real world
+            situations, is almost impossible.
+          </p>
+
           <p className="text-lg text-gray-800 leading-relaxed">
-            Food is one of the most natural ways people connect with
-            language, culture, and place — but many food experiences
-            still feel difficult to navigate with confidence.
+            Don’t waste your precious travel time switching between multiple apps and
+            translation tools. Instead, allow YumWords to instantly and effortlessly explain
+            your options, along with genuinely useful explanations, tips and personalised
+            prompts, and enjoy the experience of navigating new and unfamiliar menus with
+            assurance; you will likely be rewarded with an excellent meal, after all.
           </p>
         </div>
 
-        {/* Content blocks */}
-        <div className="grid gap-10 md:grid-cols-2">
-
-          {/* Left */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Built around real experiences
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed mb-4">
-              YumWords was created from everyday situations:
-              travelling, ordering unfamiliar food, learning through
-              cooking, and trying to better understand regional food
-              traditions.
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              The apps are designed to make those experiences feel
-              more approachable, practical, and enjoyable.
-            </p>
-          </div>
-
-          {/* Right */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Focused rather than overwhelming
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed mb-4">
-              YumWords does not try to catalogue everything.
-              The goal is careful selection, clarity, and helping
-              people make better choices with less friction.
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              Each app focuses on a specific area —
-              travel, French cooking, or cheese —
-              while sharing the same broader philosophy.
-            </p>
-          </div>
-
-        </div>
       </div>
     </section>
   );

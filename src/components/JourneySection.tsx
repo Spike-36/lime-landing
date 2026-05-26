@@ -1,74 +1,37 @@
 export default function JourneySection() {
   return (
     <section className="px-6 py-14 md:py-20 bg-white">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
 
-        {/* Section intro */}
-        <div className="max-w-3xl mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-            A growing long-term project
+        <div className="space-y-8">
+
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight">
+            As a husband-and-wife development team, we have been eating
+            our way across Asia since 19TK, using food as a way of
+            connecting with people and places as we go.
           </h2>
 
           <p className="text-lg text-gray-800 leading-relaxed">
-            YumWords began as a practical idea:
-            helping people feel more confident exploring unfamiliar food,
-            language, and local culture through everyday experiences.
+            But like many travellers, we still found ourselves switching
+            between translation apps, restaurant reviews and local blog
+            posts every time. We didn’t want to waste a single meal –
+            but still feared choosing at random and getting it “wrong.”
           </p>
-        </div>
 
-        {/* Timeline / journey blocks */}
-        <div className="grid gap-10 md:grid-cols-3">
+          <p className="text-lg text-gray-800 leading-relaxed">
+            YumWords was built on our latest trip to Chiang Mai, Thailand
+            – born out of a desire to improve our own dining experiences
+            and try new dishes by demystifying the ordering process and
+            making unfamiliar menus feel exciting rather than intimidating.
+            We want to help our fellow curious travellers do the same.
+          </p>
 
-          {/* Step 1 */}
-          <div>
-            <div className="text-sm font-semibold tracking-wide text-gray-500 mb-3">
-              STEP 1
-            </div>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Travel and food discovery
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed">
-              The first YumWords experiences focused on helping travellers
-              understand local dishes more clearly and make better food choices
-              with less uncertainty.
-            </p>
-          </div>
-
-          {/* Step 2 */}
-          <div>
-            <div className="text-sm font-semibold tracking-wide text-gray-500 mb-3">
-              STEP 2
-            </div>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Cooking and language learning
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed">
-              The project expanded into French food and cooking,
-              combining recipes, ingredients, and practical language learning
-              through real-world food experiences.
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div>
-            <div className="text-sm font-semibold tracking-wide text-gray-500 mb-3">
-              STEP 3
-            </div>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Regional food culture
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed">
-              YumWords continues to grow through focused food experiences,
-              including regional traditions such as European cheese,
-              with future areas planned over time.
-            </p>
-          </div>
+          <p className="text-lg text-gray-800 leading-relaxed">
+            The YumWords apps are still evolving, and we’re always
+            interested to hear ideas, suggestions and feedback from
+            like-minded travellers who are seeking food, language and
+            local discovery together in one simple experience.
+          </p>
 
         </div>
       </div>

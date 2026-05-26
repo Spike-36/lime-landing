@@ -1,25 +1,39 @@
 export default function WhoWeAreBlock() {
   return (
-    <section className="bg-yellow-300 px-4 py-12 text-black text-left">
-      <div className="max-w-3xl mx-auto text-justify">
-        <h2 className="text-3xl font-bold text-center mb-6">Who are we?</h2>
-        <h3 className="text-xl font-bold mb-4">Kumamoto.dev</h3>
-        <p className="mb-4">
-          Born in the 1960s, I’ve experienced that familiar fear and anxiety while walking home alone—
-          especially after dark.
-        </p>
-        <p>
-          Kumamoto Development is an independent software studio focused on building simple, useful digital products.
-The work centres on clarity, reliability, and respectful design choices.
-Apps are designed to be easy to understand and practical in everyday situations.
-User privacy is treated as a priority, not an afterthought.
-The studio avoids unnecessary complexity, tracking, and intrusive features.
-Products are shaped by real-world use rather than abstract metrics.
-Kumamoto Development values thoughtful engineering and clean presentation.
-The goal is to create tools that people can trust and enjoy using.
-Development is ongoing, with attention paid to consistency and quality.
-Every project aims to solve a specific problem well rather than many problems poorly.
-        </p>
+    <section className="bg-yellow-300 px-6 py-14 md:py-20 text-black">
+      <div className="max-w-4xl mx-auto">
+
+        <h2 className="text-3xl md:text-4xl font-semibold mb-8 leading-tight">
+          As a husband-and-wife development team, we have been eating
+          our way across Asia since 19TK, using food as a way of
+          connecting with people and places as we go.
+        </h2>
+
+        <div className="space-y-6 text-lg leading-relaxed text-black/90">
+          <p>
+            But like many travellers, we still found ourselves switching
+            between translation apps, restaurant reviews and local blog
+            posts every time. We didn’t want to waste a single meal –
+            but still feared choosing at random and getting it “wrong.”
+          </p>
+
+          <p>
+            YumWords was built on our latest trip to Chiang Mai, Thailand
+            – born out of a desire to improve our own dining experiences
+            and try new dishes by demystifying the ordering process and
+            making unfamiliar menus feel exciting, as opposed to
+            intimidating. We want to help our fellow curious travellers
+            do the same.
+          </p>
+
+          <p>
+            The YumWords apps are still evolving, and we’re always
+            interested to hear ideas, suggestions and feedback from
+            likeminded travellers who are seeking food, language and
+            local discovery together in one simple experience.
+          </p>
+        </div>
+
       </div>
     </section>
   );

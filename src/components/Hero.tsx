@@ -67,19 +67,16 @@ const Hero: React.FC<HeroProps> = ({ variant = "yumwords" }) => {
       : {
           title: (
         <>
-          Food, language, and culture —
-          <br />
-          through practical experiences
+          Travel well, eat better
         </>
       ),
       subtitle: (
         <>
-          YumWords is a family of apps designed to help people
-          <br />
-          explore food more confidently and meaningfully
+          Simple food and language apps for curious travellers
+        
         </>
       ),
-      cta: "Explore the Apps",
+      cta: "Try Yumwords",
         };
 
   // 👉 Variant-driven button styling

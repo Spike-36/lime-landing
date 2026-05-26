@@ -5,21 +5,21 @@ export default function ExploreYumWordsSection() {
       description:
         "Food discovery and practical language support for travel across Asia.",
       href: "/asia",
-      button: "Explore Asia",
+      button: "App Store",
     },
     {
       title: "YumWords France",
       description:
         "French food, recipes, and language learning through everyday cooking.",
       href: "/france",
-      button: "Explore France",
+      button: "App Store",
     },
     {
       title: "YumWords Cheese",
       description:
         "A practical guide to understanding and choosing European cheese.",
       href: "/cheese",
-      button: "Explore Cheese",
+      button: "App Store",
     },
   ];
 

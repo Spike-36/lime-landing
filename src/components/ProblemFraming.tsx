@@ -35,11 +35,11 @@ export default function ProblemFraming({
         }
       : {
           lead:
-            "Food is one of the most powerful ways people connect with language, culture, and place.",
+            "Eating delicious food is one of the fastest and most powerful ways to connect with culture, language and place – but it can also be intimidating and overwhelming.",
           body:
-            "YumWords is a growing family of apps designed to help people explore food more confidently — whether travelling, cooking, or discovering regional food traditions.",
-          emphasis:
-            "Practical experiences. Real food. Genuine cultural connection.",
+            "YumWords is a growing family of apps specifically designed to encourage travelers to follow their curiosity (and their appetites), and explore new cultures with confidence and ease.",
+          // emphasis:
+          //   "Practical experiences. Real food. Genuine cultural connection.",
         };
 
   return (
