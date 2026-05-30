@@ -11,95 +11,129 @@ export type DemoItem = {
 type Variant = "yumwords" | "asia" | "france" | "cheese"
 
 export function getDemoItems(variant: Variant): DemoItem[] {
+  // 👉 Cheese
   if (variant === "cheese") {
     return [
       {
-        id: "brie",
-        image: "/demo/images/brie.jpg",
-        audio: "",
-        word: "Brie",
-        phonetic: "bree",
+        id: "epoisses",
+        image: "/demo/images/epoisses.jpg",
+        audio: "/demo/audio/epoisses.mp3",
+        word: "Époisses",
+        phonetic: "ay-pwahs",
         demoText:
-          "Brie is a soft, creamy cheese with a mild, buttery flavour. It becomes softer and more runny as it warms, and is often served at room temperature. The rind is edible and adds a slight earthiness.",
+          "Époisses is a soft washed-rind cheese with a rich, creamy texture and a strong aroma. Despite its bold smell, the flavour is smooth, savoury, and deeply buttery.",
         context:
-          "Commonly served on cheese boards or as a starter with bread.",
+          "Traditionally eaten with bread or served as part of a French cheese board.",
       },
       {
         id: "camembert",
         image: "/demo/images/camembert.jpg",
-        audio: "",
+        audio: "/demo/audio/camembert.mp3",
         word: "Camembert",
         phonetic: "ka-mom-bair",
         demoText:
-          "Camembert is a soft, bloomy-rind cheese with a richer, more earthy flavour than Brie. It softens as it warms, becoming creamy and slightly runny, with a deeper aroma.",
+          "Camembert is a soft, bloomy-rind cheese with a creamy texture and earthy flavour. It softens as it warms and develops a richer aroma.",
         context:
-          "Often served baked, or as part of a cheese board with bread.",
+          "Often served baked, or enjoyed with bread and cider in Normandy.",
       },
       {
         id: "comte",
         image: "/demo/images/comte.jpg",
-        audio: "",
+        audio: "/demo/audio/comte.mp3",
         word: "Comté",
         phonetic: "com-tay",
         demoText:
-          "Comté is a firm, aged cheese with a nutty and slightly sweet flavour. It becomes more complex as it matures, developing deeper savoury notes. It slices cleanly and works well both on its own and in cooking.",
+          "Comté is a firm mountain cheese with a nutty, slightly sweet flavour that becomes deeper and more savoury with age.",
         context:
-          "Often used in sandwiches, gratins, or eaten as part of a cheese board.",
+          "Frequently eaten on cheese boards, in sandwiches, or melted into gratins.",
       },
       {
         id: "reblochon",
         image: "/demo/images/reblochon.jpg",
-        audio: "",
+        audio: "/demo/audio/reblochon.mp3",
         word: "Reblochon",
         phonetic: "reh-blo-shon",
         demoText:
-          "Reblochon is a soft, washed-rind cheese with a creamy texture and a savoury, slightly nutty flavour. It has a stronger aroma than it tastes, with a smooth, rich finish.",
+          "Reblochon is a soft washed-rind cheese with a creamy texture and gentle nutty flavour. It melts smoothly and has a rich finish.",
         context:
-          "Traditionally used in dishes like tartiflette or served warm with potatoes.",
+          "Traditionally used in Alpine dishes like tartiflette.",
       },
       {
         id: "roquefort",
         image: "/demo/images/roquefort.jpg",
-        audio: "",
+        audio: "/demo/audio/roquefort.mp3",
         word: "Roquefort",
         phonetic: "rock-for",
         demoText:
-          "Roquefort is a blue cheese made from sheep’s milk with a strong, salty flavour and creamy texture. The blue veins create a sharp, tangy taste that stands out immediately.",
+          "Roquefort is a sheep’s milk blue cheese with a salty, tangy flavour and creamy texture marked by distinctive blue veins.",
         context:
-          "Typically served in small portions on cheese boards or with salads.",
+          "Often served in small portions with bread, walnuts, or salad.",
       },
     ]
   }
 
-  // 👉 France placeholder demo content
+  // 👉 France
   if (variant === "france") {
     return [
       {
-        id: "coq-au-vin",
-        image: "/demo/images/coq_au_vin.jpg",
-        audio: "",
-        word: "Coq au Vin",
-        phonetic: "cock oh van",
+        id: "bouillabaisse",
+        image: "/demo/images/bouillabaisse.jpg",
+        audio: "/demo/audio/bouillabaisse.mp3",
+        word: "Bouillabaisse",
+        phonetic: "boo-ya-bess",
         demoText:
-          "Coq au vin is a traditional French dish where chicken is slowly cooked in red wine with onions, mushrooms, and herbs. The sauce becomes rich and savoury as it cooks.",
+          "Bouillabaisse is a traditional fish stew from Marseille made with several kinds of fish, shellfish, tomatoes, saffron, and herbs.",
         context:
-          "Often served as a comforting main course in traditional French cooking.",
+          "Traditionally served with toasted bread and rouille sauce along the Mediterranean coast.",
       },
       {
-        id: "croissant",
-        image: "/demo/images/croissant.jpg",
-        audio: "",
-        word: "Croissant",
-        phonetic: "kwah-son",
+        id: "salade-nicoise",
+        image: "/demo/images/salade_nicoise.jpg",
+        audio: "/demo/audio/salade_nicoise.mp3",
+        word: "Salade Niçoise",
+        phonetic: "sa-lad nee-swahz",
         demoText:
-          "A croissant is a buttery, flaky pastry made with layered dough. It is light, crisp on the outside, and soft in the centre.",
+          "Salade Niçoise is a composed salad made with tomatoes, olives, tuna, anchovies, eggs, and fresh vegetables.",
         context:
-          "Most commonly eaten for breakfast or with coffee.",
+          "Commonly eaten as a light lunch in the south of France.",
+      },
+      {
+        id: "boeuf-bourguignon",
+        image: "/demo/images/boeuf_bourguignon.jpg",
+        audio: "/demo/audio/boeuf_bourguignon.mp3",
+        word: "Bœuf Bourguignon",
+        phonetic: "buff boor-gin-yon",
+        demoText:
+          "Bœuf bourguignon is a slow-cooked beef stew prepared with red wine, onions, mushrooms, and herbs.",
+        context:
+          "Traditionally served as a rich and comforting main course.",
+      },
+      {
+        id: "ratatouille",
+        image: "/demo/images/ratatouille.jpg",
+        audio: "/demo/audio/ratatouille.mp3",
+        word: "Ratatouille",
+        phonetic: "rat-a-too-ee",
+        demoText:
+          "Ratatouille is a vegetable dish made with tomatoes, aubergines, courgettes, peppers, onions, and olive oil.",
+        context:
+          "Often served in Provence as a side dish or light meal.",
+      },
+      {
+        id: "tarte-tatin",
+        image: "/demo/images/tarte_tatin.jpg",
+        audio: "/demo/audio/tarte_tatin.mp3",
+        word: "Tarte Tatin",
+        phonetic: "tart ta-tan",
+        demoText:
+          "Tarte Tatin is an upside-down caramelised apple tart with a buttery pastry base.",
+        context:
+          "Usually served warm as a traditional French dessert.",
       },
     ]
   }
 
-  // 👉 Default: YumWords umbrella + Asia
+  // 👉 Asia + YumWords default
   return [
     {
       id: "pad-thai",
@@ -108,31 +142,53 @@ export function getDemoItems(variant: Variant): DemoItem[] {
       word: "ผัดไทย",
       phonetic: "pàt tai",
       demoText:
-        "Pad Thai is a stir-fried noodle dish made with flat rice noodles, egg, and a lightly sweet-savoury sauce.",
+        "Pad Thai is a stir-fried noodle dish made with rice noodles, egg, tamarind sauce, and fresh herbs.",
       context:
-        "Often ordered as a main dish from street stalls or casual restaurants.",
+        "Often ordered from busy street stalls and casual restaurants.",
     },
     {
       id: "green-curry",
       image: "/demo/images/green_curry.jpg",
-      audio: "",
+      audio: "/demo/audio/green_curry.mp3",
       word: "แกงเขียวหวาน",
-      phonetic: "gaeng khĭeow wăan",
+      phonetic: "gaeng keow wan",
       demoText:
-        "Green curry is a coconut-based curry with fragrant herbs and a gradual heat.",
+        "Green curry is a coconut-based curry with green chillies, herbs, and a gentle lingering heat.",
       context:
-        "More commonly ordered at restaurants or food courts than from street carts.",
+        "Commonly eaten with jasmine rice in restaurants and food courts.",
     },
     {
-      id: "look-chin",
-      image: "/demo/images/look_chin.jpg",
-      audio: "",
-      word: "ลูกชิ้น",
-      phonetic: "look CHIN",
+      id: "mango-sticky-rice",
+      image: "/demo/images/mango.jpg",
+      audio: "/demo/audio/mango_sticky_rice.mp3",
+      word: "ข้าวเหนียวมะม่วง",
+      phonetic: "khao neow ma-muang",
       demoText:
-        "Look chin are grilled meat or fish balls commonly sold from Thai street carts.",
+        "Mango sticky rice combines sweet mango with coconut sticky rice and a light coconut cream topping.",
       context:
-        "Usually bought as a savoury snack from street vendors.",
+        "Often eaten as a dessert during mango season in Thailand.",
+    },
+    {
+      id: "sugarcane-juice",
+      image: "/demo/images/sugarcane_juice.jpg",
+      audio: "/demo/audio/sugarcane_juice.mp3",
+      word: "น้ำอ้อย",
+      phonetic: "nam oi",
+      demoText:
+        "Sugarcane juice is a freshly pressed drink with a naturally sweet and refreshing flavour.",
+      context:
+        "Usually sold from street carts in hot weather.",
+    },
+    {
+      id: "som-tam",
+      image: "/demo/images/som_tam.jpg",
+      audio: "/demo/audio/som_tam.mp3",
+      word: "ส้มตำ",
+      phonetic: "som tam",
+      demoText:
+        "Som tam is a spicy green papaya salad with lime, chilli, fish sauce, and crushed peanuts.",
+      context:
+        "Frequently eaten as a shared dish alongside grilled meats and sticky rice.",
     },
   ]
 }
