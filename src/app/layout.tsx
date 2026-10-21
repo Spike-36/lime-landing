@@ -1,6 +1,6 @@
 import './globals.css'
 import { IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google'
-import ConditionalNavbar from '@/components/ConditionalNavbar'
+import { SITE_URL } from '@/lib/site'
 
 const ibm = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -17,8 +17,10 @@ const serif = Source_Serif_4({
 })
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'YumWords',
-  description: 'Why legal tech fails — and how to fix it.',
+  description:
+    'YumWords helps you discover the food of Thailand: dishes, ingredients and the Thai words behind them.',
 }
 
 export default function RootLayout({
@@ -36,7 +38,6 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
-        <ConditionalNavbar />
         {children}
       </body>
     </html>

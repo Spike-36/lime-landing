@@ -1,0 +1,106 @@
+/* Styles for the /thailand landing page */
+
+.thai {
+  font-family: var(--font-thai), sans-serif;
+}
+
+.overlay {
+  animation: fadeIn 200ms ease-out both;
+}
+
+.overlayClosing {
+  animation: fadeOut 180ms ease-in both;
+}
+
+/* Mobile: bottom sheet slides up */
+.panel {
+  animation: sheetUp 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.panelClosing {
+  animation: sheetDown 180ms ease-in both;
+}
+
+/* Desktop: centred modal fades and settles */
+@media (min-width: 768px) {
+  .panel {
+    animation: modalIn 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .panelClosing {
+    animation: modalOut 160ms ease-in both;
+  }
+}
+
+.photo {
+  animation: fadeIn 260ms ease-out both;
+}
+
+/* Sound bars shown while audio plays */
+.bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+
+.bars span {
+  width: 3px;
+  border-radius: 2px;
+  background: currentColor;
+  animation: bar 700ms ease-in-out infinite;
+}
+
+.bars span:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.bars span:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+@keyframes bar {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes sheetUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes sheetDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes modalOut {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: scale(0.98); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .overlayClosing,
+  .panel,
+  .panelClosing,
+  .photo,
+  .bars span {
+    animation: none;
+  }
+}

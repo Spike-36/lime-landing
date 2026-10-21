@@ -1,3 +1,45 @@
+# YumWords website
+
+The public site is the YumWords Thailand landing page at
+`https://yumwords.com/thailand`, plus `/privacy` and `/contact`. The root `/`
+redirects (307, temporary) to `/thailand`; see `redirects()` in
+`next.config.ts`. `www.yumwords.com` is redirected to `yumwords.com` by the
+Vercel project's domain settings, not by this code.
+
+## YumWords Thailand page
+
+- Page: `src/app/thailand/` (`page.tsx`, the "Beyond Pad Thai" gallery and
+  the dish articles in `CardDetail.tsx`)
+- Media: `public/media/thailand/` (`cards/` photos, `audio/` Thai
+  pronunciations, `features/` illustrations, `badges/` store badges)
+- Store links: set `STORE_LINKS` in `src/app/thailand/StoreBadges.tsx` when
+  the App Store and Google Play listings are live. Until then the badges are
+  shown dimmed as "Coming soon".
+- Canonical origin: `SITE_URL` in `src/lib/site.ts` (used by metadata,
+  `sitemap.xml` and `robots.txt`). Keep it in step with the primary domain in
+  Vercel.
+
+### Updating the dish content
+
+The six dish cards in `src/app/thailand/cards.ts` are generated from the
+FileMaker export bundled with the Flutter app. Don't edit that file by hand.
+Update the source data, then regenerate:
+
+```bash
+python3 scripts/generate-thailand-cards.py
+# or, if YumWords-v2 is not next to this repository:
+python3 scripts/generate-thailand-cards.py --source /path/to/YumWords-v2/assets/thailand
+```
+
+The script copies text verbatim (no rewriting or standardising) and needs only
+the Python standard library. It does not copy media: if a card's photo or audio
+changes, update `public/media/thailand/cards/<ID>.webp` (512 × 512, converted
+from the app's `images/words/<ID>.*.jpg`) and
+`public/media/thailand/audio/<ID>.mp3` (copied from the app's
+`audio/<ID>.*.mp3`).
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
