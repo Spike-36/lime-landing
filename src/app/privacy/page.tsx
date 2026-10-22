@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
         </h1>
 
         <p className="mb-6 text-sm">
-          <strong>Effective Date:</strong> 21 October 2026
+          <strong>Effective Date:</strong> 22 October 2026
         </p>
 
         <p className="mb-6">
