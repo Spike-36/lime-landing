@@ -41,9 +41,11 @@ export default function TestPage() {
             Help test YumWords Thailand
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-[#4A4036] md:text-xl">
-            YumWords Thailand helps you discover Thai dishes, ingredients and flavours, and learn a little Thai along
-            the way. Before it is released, we are looking for people to try it on their iPhone or Android phone and
-            tell us honestly what they think.
+            YumWords Thailand is currently being tested through Apple’s TestFlight and Google Play’s official app testing
+            programmes, ahead of its public release.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-[#4A4036] md:text-xl">
+            Register below and we’ll send you instructions for installing the test version on your phone.
           </p>
           <p className="mt-6 rounded-[20px] bg-[#F8EDD3] p-5 text-lg font-medium leading-relaxed">{OFFER}</p>
         </section>
