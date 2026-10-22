@@ -80,8 +80,8 @@ export default function RegisterForm() {
         <input id="email" name="email" type="email" required maxLength={320} autoComplete="email"
           aria-describedby="email-help" className={field} />
         <p id="email-help" className="mt-1.5 text-sm text-[#6B5E4E]">
-          Use the email address of the Apple Account (iPhone) or Google Account (Android) that you use on your phone.
-          We need it to give you access to the test version of the app.
+          Android: use the email address of the Google account signed in to Google Play on your phone. iPhone: use an
+          email address where you can receive Apple’s TestFlight invitation.
         </p>
       </div>
 
