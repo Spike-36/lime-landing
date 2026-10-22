@@ -11,7 +11,7 @@ export default function RegisterForm() {
   const [contact, setContact] = useState<Contact | null>(null)
   const [state, setState] = useState<"idle" | "sending" | "done">("idle")
   const [error, setError] = useState<string | null>(null)
-  const [done, setDone] = useState<{ name: string; contact: Contact } | null>(null)
+  const [done, setDone] = useState<{ name: string; contact: Contact; platform: Platform } | null>(null)
   const started = useRef(0)
   const heading = useRef<HTMLHeadingElement>(null)
 
@@ -45,7 +45,7 @@ export default function RegisterForm() {
       })
       const r = (await res.json().catch(() => null)) as { ok?: boolean; error?: string } | null
       if (res.ok && r?.ok) {
-        setDone({ name: body.name.trim().split(/\s+/)[0], contact: body.contact as Contact })
+        setDone({ name: body.name.trim().split(/\s+/)[0], contact: body.contact as Contact, platform: body.platform as Platform })
         setState("done")
         return
       }
@@ -61,8 +61,9 @@ export default function RegisterForm() {
       <div className="rounded-[24px] bg-[#E7EFE9] p-6 md:p-8" role="status">
         <h3 ref={heading} tabIndex={-1} className="text-2xl font-semibold outline-none">Thank you, {done.name}</h3>
         <p className="mt-3 text-lg leading-relaxed text-[#2F3A31]">
-          We’ve received your registration. We’ll arrange your testing access, then send your installation
-          instructions by {done.contact === "whatsapp" ? "WhatsApp" : "email"}. Nothing needs to be installed yet.
+          We’ve received your registration. Once we’ve added you to{" "}
+          {done.platform === "android" ? "Google Play’s official app testing programme" : "Apple’s TestFlight"}, we’ll send you
+          instructions for installing the test version by {done.contact === "whatsapp" ? "WhatsApp" : "email"}.
         </p>
       </div>
     )

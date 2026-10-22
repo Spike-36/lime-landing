@@ -68,8 +68,8 @@ export default function TestPage() {
         <section aria-labelledby="register" className="mx-auto max-w-2xl rounded-[32px] bg-[#F0EDE6] p-6 md:p-10">
           <h2 id="register" className="text-2xl font-semibold">Register to test</h2>
           <p className="mb-6 mt-2 text-[#4A4036]">
-            The test version isn’t in the App Store or Google Play yet, so we add each tester ourselves. Nothing needs
-            to be installed until you hear from us.
+            The test version is installed through Apple’s TestFlight or Google Play’s official app testing programme. We
+            add each tester ourselves, then send you installation instructions.
           </p>
           <RegisterForm />
         </section>
