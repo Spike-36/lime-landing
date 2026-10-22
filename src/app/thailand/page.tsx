@@ -110,16 +110,25 @@ export default function ThailandPage() {
         </section>
 
         {/* Testing invitation */}
-        <aside aria-label="Testing" className="px-5 pb-10 sm:px-8 md:pb-14">
-          <Link
-            href="/test"
-            className="mx-auto flex max-w-3xl flex-col gap-1 rounded-2xl border border-[#E6DCCB] bg-white/70 px-5 py-4 text-left transition hover:border-orange-300 hover:bg-white sm:flex-row sm:items-center sm:gap-4"
-          >
-            <span className="shrink-0 text-sm font-semibold text-orange-700">Testing in Chiang Mai</span>
-            <span className="flex-1 text-[15px] leading-snug text-[#4A4036]">{OFFER}</span>
-            <span className="shrink-0 text-sm font-semibold text-[#1F1B16]">Find out more →</span>
-          </Link>
-        </aside>
+        <section aria-labelledby="testing-title" className="px-5 pb-16 sm:px-8 md:pb-24">
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-7 rounded-[32px] bg-[#F0EDE6] px-6 py-10 text-center md:flex-row md:items-center md:gap-12 md:px-14 md:py-14 md:text-left">
+            <div className="flex-1">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-orange-700">Testing phase</p>
+              <h2 id="testing-title" className="mt-3 text-[30px] font-semibold leading-tight tracking-tight md:text-[40px]">
+                Help us test YumWords Thailand
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4036] md:mx-0 md:text-xl md:leading-relaxed">
+                {OFFER}
+              </p>
+            </div>
+            <Link
+              href="/test"
+              className="shrink-0 rounded-full bg-orange-600 px-8 py-4 text-lg font-semibold text-white shadow-sm transition hover:bg-orange-700"
+            >
+              Become a tester →
+            </Link>
+          </div>
+        </section>
 
         {/* 2. Beyond Pad Thai */}
         <section aria-labelledby="collection-title" className="px-5 pb-16 sm:px-8 md:pb-24">

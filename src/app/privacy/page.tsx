@@ -151,8 +151,17 @@ export default function PrivacyPolicyPage() {
           time by emailing support@yumwords.com.
         </p>
         <p className="mt-3">
-          To protect the form from abuse, we keep a scrambled (hashed) form of
-          your IP address and email address for two days.
+          If you send feedback at yumwords.com/feedback, we store your answers
+          with your tester registration and use them only to improve
+          YumWords. If you send it without your personal feedback link, we
+          keep the email address you give with it, so we can match it to your
+          registration. Feedback is kept for the same period as your other
+          testing details.
+        </p>
+        <p className="mt-3">
+          To protect these forms from abuse, we keep a scrambled (hashed) form
+          of your IP address, and of your email address or feedback link, for
+          two days.
         </p>
 
         <h3 className="mt-6 mb-2 text-lg font-semibold">Hosting</h3>

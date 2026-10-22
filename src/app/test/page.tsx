@@ -36,14 +36,14 @@ export default function TestPage() {
 
       <main className="px-5 pb-16 sm:px-8">
         <section className="mx-auto max-w-2xl pb-10 pt-6 md:pt-12">
-          <p className="font-medium text-orange-700">Testing in Chiang Mai</p>
+          <p className="font-medium text-orange-700">Testing phase</p>
           <h1 className="mt-2 text-[34px] font-semibold leading-[1.05] tracking-[-0.02em] sm:text-[48px]">
             Help test YumWords Thailand
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-[#4A4036] md:text-xl">
             YumWords Thailand helps you discover Thai dishes, ingredients and flavours, and learn a little Thai along
-            the way. Before it is released, we are looking for people in Chiang Mai to try it on their iPhone or
-            Android phone and tell us honestly what they think.
+            the way. Before it is released, we are looking for people to try it on their iPhone or Android phone and
+            tell us honestly what they think.
           </p>
           <p className="mt-6 rounded-[20px] bg-[#F8EDD3] p-5 text-lg font-medium leading-relaxed">{OFFER}</p>
         </section>
