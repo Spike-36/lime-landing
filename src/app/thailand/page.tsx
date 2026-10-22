@@ -2,7 +2,9 @@
 // (see scripts/generate-thailand-cards.py); media lives in
 // public/media/thailand/.
 import { Sarabun } from "next/font/google"
+import Link from "next/link"
 import Footer from "@/components/Footer"
+import { OFFER } from "@/lib/registration"
 import { collection } from "./cards"
 import CollectionGallery from "./CollectionGallery"
 import StoreBadges from "./StoreBadges"
@@ -106,6 +108,18 @@ export default function ThailandPage() {
             </div>
           </div>
         </section>
+
+        {/* Testing invitation */}
+        <aside aria-label="Testing" className="px-5 pb-10 sm:px-8 md:pb-14">
+          <Link
+            href="/test"
+            className="mx-auto flex max-w-3xl flex-col gap-1 rounded-2xl border border-[#E6DCCB] bg-white/70 px-5 py-4 text-left transition hover:border-orange-300 hover:bg-white sm:flex-row sm:items-center sm:gap-4"
+          >
+            <span className="shrink-0 text-sm font-semibold text-orange-700">Testing in Chiang Mai</span>
+            <span className="flex-1 text-[15px] leading-snug text-[#4A4036]">{OFFER}</span>
+            <span className="shrink-0 text-sm font-semibold text-[#1F1B16]">Find out more →</span>
+          </Link>
+        </aside>
 
         {/* 2. Beyond Pad Thai */}
         <section aria-labelledby="collection-title" className="px-5 pb-16 sm:px-8 md:pb-24">

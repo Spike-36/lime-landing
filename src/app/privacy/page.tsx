@@ -121,6 +121,40 @@ export default function PrivacyPolicyPage() {
           under its own privacy policy.
         </p>
 
+        <h3 id="testing" className="mt-6 mb-2 scroll-mt-6 text-lg font-semibold">
+          Testing programme registration
+        </h3>
+        <p>
+          If you register to test YumWords Thailand at yumwords.com/test, we
+          collect your name, email address, phone type (iPhone or Android),
+          how you prefer to be contacted and, if you choose WhatsApp, your
+          WhatsApp number. We also record when you registered and that you
+          agreed to be contacted about testing.
+        </p>
+        <p className="mt-3">
+          We use these details only to run the testing programme: to give you
+          access to the test version of the app, to send you installation
+          instructions, to contact you about testing and your feedback, and to
+          record any lifetime free access granted to testers. To give you
+          access, we add your email address to Apple TestFlight or Google Play
+          testing, which Apple and Google handle under their own privacy
+          policies. Your details are stored in our editorial database, hosted
+          by Supabase. We do not use them for marketing, and we share them
+          only as described here.
+        </p>
+        <p className="mt-3">
+          We keep these details for 12 months after the testing programme ends
+          and then delete them, unless the law requires us to keep them longer.
+          If you have been granted lifetime free access, we may keep the record
+          of that, with your name and email address, for as long as it
+          applies. You can ask us to see, correct or delete your details at any
+          time by emailing support@yumwords.com.
+        </p>
+        <p className="mt-3">
+          To protect the form from abuse, we keep a scrambled (hashed) form of
+          your IP address and email address for two days.
+        </p>
+
         <h3 className="mt-6 mb-2 text-lg font-semibold">Hosting</h3>
         <p>
           The website is hosted by Vercel, which processes standard technical
