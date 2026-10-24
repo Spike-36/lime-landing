@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
         </h1>
 
         <p className="mb-6 text-sm">
-          <strong>Effective Date:</strong> 22 October 2026
+          <strong>Effective Date:</strong> 24 October 2026
         </p>
 
         <p className="mb-6">
@@ -157,6 +157,16 @@ export default function PrivacyPolicyPage() {
           keep the email address you give with it, so we can match it to your
           registration. Feedback is kept for the same period as your other
           testing details.
+        </p>
+        <p className="mt-3">
+          With your permission, we may also keep a photograph of you with your
+          tester details, to help us recognise you. Photographs are optional:
+          we add one only if you agree, and testers cannot upload them. They
+          are stored privately, seen only by the YumWords team in our editorial
+          system, and never displayed publicly. We do not use them for face
+          recognition or any automatic identification. You can ask us to
+          remove your photograph at any time; otherwise it is kept for the same
+          period as your other testing details.
         </p>
         <p className="mt-3">
           To protect these forms from abuse, we keep a scrambled (hashed) form
