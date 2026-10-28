@@ -1,0 +1,150 @@
+/* Places: a travel journal. Provisional, to be reviewed on the preview. */
+
+.page {
+  background-color: #fbf8f3;
+  /* Faint paper grain */
+  background-image:
+    radial-gradient(rgba(120, 100, 70, 0.045) 1px, transparent 1px),
+    radial-gradient(rgba(120, 100, 70, 0.03) 1px, transparent 1px);
+  background-size: 22px 22px, 31px 31px;
+  background-position: 0 0, 11px 17px;
+}
+
+.hand {
+  font-family: var(--font-hand), "Bradley Hand", cursive;
+}
+
+.thai {
+  font-family: var(--font-thai), sans-serif;
+}
+
+.serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* A Polaroid: white card, deeper at the bottom for the caption. Takes the
+   photo's own shape. */
+.polaroid {
+  position: relative;
+  display: block;
+  background: #fffdf8;
+  padding: 10px 10px 0;
+  box-shadow:
+    0 1px 2px rgba(31, 27, 22, 0.08),
+    0 10px 24px -10px rgba(31, 27, 22, 0.35);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+@media (min-width: 640px) {
+  .polaroid {
+    padding: 14px 14px 0;
+  }
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e9e1d4;
+}
+
+.caption {
+  display: block;
+  padding: 10px 4px 14px;
+  text-align: center;
+  line-height: 1.1;
+  color: #2b2620;
+}
+
+a:hover > .polaroid,
+a:focus-visible > .polaroid,
+.lift:hover .polaroid {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow:
+    0 2px 4px rgba(31, 27, 22, 0.08),
+    0 18px 34px -14px rgba(31, 27, 22, 0.45);
+}
+
+/* A strip of masking tape across the top */
+.tape::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 96px;
+  height: 26px;
+  transform: translateX(-50%) rotate(var(--tape-tilt, -3deg));
+  background: rgba(240, 226, 190, 0.78);
+  box-shadow: 0 1px 2px rgba(31, 27, 22, 0.08);
+  clip-path: polygon(3% 0, 97% 4%, 100% 50%, 96% 100%, 2% 96%, 0 45%);
+  z-index: 1;
+}
+
+/* A rubber-stamp label for the category */
+.stamp {
+  display: inline-block;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  padding: 1px 7px 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b4532a;
+  transform: rotate(-2deg);
+  opacity: 0.9;
+}
+
+.draft {
+  display: inline-block;
+  border: 2px solid #b91c1c;
+  border-radius: 4px;
+  padding: 0 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b91c1c;
+  transform: rotate(4deg);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* The handwritten sign-off */
+.signature {
+  font-family: var(--font-hand), cursive;
+  font-size: 1.9rem;
+  color: #6b5e4a;
+}
+
+/* The city page's board. A grid, not CSS columns: Chrome misplaces the
+   tilted frames' tape in columns. Each place keeps its photo's shape. */
+.board {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  column-gap: 2.5rem;
+  row-gap: 3.5rem;
+}
+
+@media (min-width: 700px) {
+  .board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.entry {
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polaroid {
+    transition: none;
+  }
+}

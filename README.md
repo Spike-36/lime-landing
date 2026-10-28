@@ -38,6 +38,31 @@ from the app's `images/words/<ID>.*.jpg`) and
 `public/media/thailand/audio/<ID>.mp3` (copied from the app's
 `audio/<ID>.*.mp3`).
 
+## Places (`/places`)
+
+Pete and Sarah's food journal, city by city: `/places` (cities),
+`/places/<city>` and `/places/<city>/<place>`. Everything comes from the
+YumWords Editor's Places section; publishing or unpublishing there shows here
+within about five minutes, with no deployment. A new city appears once it has
+a published place.
+
+- Code: `src/app/places/` (pages, `Polaroid.tsx`, `places.module.css`),
+  `src/app/place-photos/[id]/route.ts` (photos), `src/lib/places.ts` (data).
+- Data: `site_places()` with the publishable key, which returns published,
+  unarchived places with public fields only. Photos are the Editor's 1600 px
+  display copies at their own proportions, served through
+  `/place-photos/<id>` only while the place is published; kept by browsers and
+  Vercel for five minutes at most.
+- Preview: with `PLACES_PREVIEW_KEY` set (in a protected Vercel preview's
+  environment only, never production), drafts are shown too, marked
+  "Draft", and their photos are never cached. Keys are made with the editor's
+  `npm run site-preview-key`.
+- Until launch the pages are hidden from search engines (`robots` in
+  `src/app/places/layout.tsx`), left out of `sitemap.xml` and not linked from
+  other pages.
+- No embedded map: the "Open in Google Maps" link keeps Google's scripts and
+  cookies off the site, so the privacy policy needs no change.
+
 ---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
