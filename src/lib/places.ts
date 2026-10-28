@@ -79,6 +79,12 @@ async function rpc(name: string, body: Record<string, unknown> | null, preview: 
 
 /** Every city with something to show, each with its places in order. */
 export const getPlaces = cache(async (): Promise<Places> => {
+  // Without the settings (a preview of another branch, say) there is nothing
+  // to show, and /places, built ahead of time, mustn't stop the build.
+  if (!config()) {
+    console.error("Places are not configured: set YUMWORDS_SUPABASE_URL and YUMWORDS_SUPABASE_PUBLISHABLE_KEY.")
+    return { preview: false, cities: [] }
+  }
   const preview = previewKey()
   const res = await rpc("site_places", preview ? { p_preview: preview } : null, !!preview)
   if (!res.ok) throw new Error(`Loading places failed: ${res.status}`)
