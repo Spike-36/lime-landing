@@ -7,6 +7,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { excerpt, getCity, mapsLink, paragraphs } from "@/lib/places"
 import { entryId } from "./entry"
+import OpenLinked from "./OpenLinked"
 import styles from "../places.module.css"
 import PlacesMap, { type Pin } from "./PlacesMap"
 
@@ -119,6 +120,7 @@ export default async function CityPage({ params }: Params) {
         </ol>
 
         <p className={`${styles.signature} pb-6 pt-8 text-right`}>— Pete &amp; Sarah</p>
+        <OpenLinked />
       </div>
     </main>
   )

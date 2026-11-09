@@ -29,7 +29,7 @@ export default async function Image({ params }: { params: Promise<{ city: string
         <div style={{ fontSize: 44, color: "#c2410c" }}>Where we eat in</div>
         <div style={{ fontSize: 128, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.05 }}>{name}</div>
         <div style={{ marginTop: 36, fontSize: 36, color: "#6B5E4A" }}>
-          {count > 0 ? `${count} ${count === 1 ? "place" : "places"} we keep going back to · ` : ""}Pete &amp; Sarah, YumWords
+          {`${count > 0 ? `${count} ${count === 1 ? "place" : "places"} we keep going back to · ` : ""}Pete & Sarah, YumWords`}
         </div>
       </div>
     ),
