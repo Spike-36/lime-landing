@@ -4,6 +4,7 @@
 import { Sarabun } from "next/font/google"
 import Link from "next/link"
 import Footer from "@/components/Footer"
+import PhotoStrip from "@/components/PhotoStrip"
 import { OFFER } from "@/lib/registration"
 import { collection } from "./cards"
 import CollectionGallery from "./CollectionGallery"
@@ -16,6 +17,10 @@ const sarabun = Sarabun({
   variable: "--font-thai",
   display: "swap",
 })
+
+// The gallery below the introduction is chosen in the Editor; this page is
+// rebuilt at most a minute after it changes.
+export const revalidate = 60
 
 export const metadata = {
   title: "Discover Thai Food · YumWords Thailand",
@@ -108,6 +113,9 @@ export default function ThailandPage() {
             </div>
           </div>
         </section>
+
+        {/* Gallery, chosen in the Editor; nothing when it has no photos */}
+        <PhotoStrip page="thailand" className="mx-auto max-w-5xl px-5 pb-16 sm:px-8 md:pb-24" />
 
         {/* Testing invitation */}
         <section aria-labelledby="testing-title" className="px-5 pb-16 sm:px-8 md:pb-24">

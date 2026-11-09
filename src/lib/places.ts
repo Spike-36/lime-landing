@@ -54,7 +54,9 @@ export interface Places {
   cities: City[]
 }
 
-function config() {
+/** The Editor's Supabase project, as the website reads it; null if not set up.
+ *  Also used by galleries.ts. */
+export function config() {
   const url = process.env.YUMWORDS_SUPABASE_URL?.replace(/\/$/, "")
   const key = process.env.YUMWORDS_SUPABASE_PUBLISHABLE_KEY
   // Belt and braces: production never sends a preview key, even if one is set.

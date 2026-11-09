@@ -5,6 +5,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import PhotoStrip from "@/components/PhotoStrip"
 import { excerpt, getCity, mapsLink, paragraphs } from "@/lib/places"
 import { entryId } from "./entry"
 import OpenLinked from "./OpenLinked"
@@ -64,6 +65,7 @@ export default async function CityPage({ params }: Params) {
       </section>
 
       <div className="mx-auto max-w-3xl">
+        <PhotoStrip page={`city:${city.slug}`} className="mb-6" />
         {pins.length > 0 && <PlacesMap pins={pins} />}
 
         <ol className="mt-6 space-y-3">
