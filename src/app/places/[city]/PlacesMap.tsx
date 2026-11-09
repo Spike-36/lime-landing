@@ -4,6 +4,7 @@
 // scrolls to it. No Google scripts, keys or cookies.
 import "leaflet/dist/leaflet.css"
 import { useEffect, useRef } from "react"
+import { entryId } from "./entry"
 import styles from "../places.module.css"
 
 export interface Pin {
@@ -13,9 +14,6 @@ export interface Pin {
   latitude: number
   longitude: number
 }
-
-/** The list entry for a place, as the city page writes it. */
-export const entryId = (slug: string) => `place-${slug}`
 
 function openEntry(slug: string) {
   const entry = document.getElementById(entryId(slug))

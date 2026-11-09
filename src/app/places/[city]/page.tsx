@@ -6,8 +6,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { excerpt, getCity, mapsLink, paragraphs } from "@/lib/places"
+import { entryId } from "./entry"
 import styles from "../places.module.css"
-import PlacesMap, { type Pin, entryId } from "./PlacesMap"
+import PlacesMap, { type Pin } from "./PlacesMap"
 
 export const revalidate = 300
 
