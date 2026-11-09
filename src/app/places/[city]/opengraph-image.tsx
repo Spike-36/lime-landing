@@ -6,7 +6,7 @@ import { getCity } from "@/lib/places"
 export const alt = "Where we eat, by Pete and Sarah of YumWords"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
-export const revalidate = 300
+export const revalidate = 60
 
 export default async function Image({ params }: { params: Promise<{ city: string }> }) {
   const found = await getCity((await params).city)

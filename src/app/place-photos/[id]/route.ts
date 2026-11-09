@@ -1,7 +1,7 @@
 // A place's photo, by its id: the 1600 px display copy, only while its
 // place is published (or, on a protected preview, a draft). Kept by
-// browsers and Vercel for five minutes at most, so a photo of a place that
-// is unpublished stops being served within about five minutes. Drafts'
+// browsers and Vercel for a minute at most, so a photo of a place that
+// is unpublished stops being served within about a minute. Drafts'
 // photos are never kept.
 import { REVALIDATE, downloadPhoto, photoDone, photoFile } from "@/lib/places"
 

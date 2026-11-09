@@ -4,7 +4,7 @@ import Link from "next/link"
 import { excerpt, getPlaces } from "@/lib/places"
 import styles from "./places.module.css"
 
-export const revalidate = 300
+export const revalidate = 60
 
 export const metadata = {
   title: "Places we like to eat",
@@ -13,7 +13,7 @@ export const metadata = {
 }
 
 export default async function PlacesPage() {
-  const { cities } = await getPlaces()
+  const { cities, intro } = await getPlaces()
   return (
     <main className="px-5 pb-8 sm:px-8">
       <section className="mx-auto max-w-3xl pb-10 pt-6 text-center md:pb-16 md:pt-12">
@@ -21,8 +21,8 @@ export default async function PlacesPage() {
         <h1 className="mt-1 text-[38px] font-semibold leading-[1.04] tracking-[-0.025em] sm:text-[54px] md:text-[64px]">
           Places we like to eat
         </h1>
-        <p className={`${styles.serif} mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[#4A4036] md:text-xl`}>
-          Restaurants, street stalls, markets and bars we keep going back to, city by city.
+        <p className={`${styles.serif} mx-auto mt-5 max-w-2xl whitespace-pre-line text-lg leading-relaxed text-[#4A4036] md:text-xl`}>
+          {intro || "Restaurants, street stalls, markets and bars we keep going back to, city by city."}
         </p>
       </section>
 

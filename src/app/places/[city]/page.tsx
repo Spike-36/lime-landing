@@ -11,7 +11,7 @@ import OpenLinked from "./OpenLinked"
 import styles from "../places.module.css"
 import PlacesMap, { type Pin } from "./PlacesMap"
 
-export const revalidate = 300
+export const revalidate = 60
 
 type Params = { params: Promise<{ city: string }> }
 

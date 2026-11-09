@@ -11,9 +11,9 @@
 //                                      scripts/site-preview-key.mjs)
 import { cache } from "react"
 
-/** Pages and photos are kept this long (seconds), so a place that is
- *  unpublished disappears within about five minutes. */
-export const REVALIDATE = 300
+/** Places data is kept this long (seconds), so a change saved in the Editor
+ *  shows within about a minute. */
+export const REVALIDATE = 60
 
 export interface PlacePhoto {
   id: string
@@ -49,6 +49,8 @@ export interface City {
 export interface Places {
   /** Drafts are shown too: a protected preview. */
   preview: boolean
+  /** The introduction at the top of /places, written in the Editor. */
+  intro?: string
   cities: City[]
 }
 
