@@ -1,8 +1,7 @@
 // Every city with places to show. A new city appears here once it has a
 // published place; nothing in the code changes.
 import Link from "next/link"
-import { excerpt, getPlaces, mainPhoto, tilt } from "@/lib/places"
-import Polaroid from "./Polaroid"
+import { excerpt, getPlaces } from "@/lib/places"
 import styles from "./places.module.css"
 
 export const revalidate = 300
@@ -12,9 +11,6 @@ export const metadata = {
   description: "Pete and Sarah’s food journal: places we like to eat, city by city.",
   alternates: { canonical: "/places" },
 }
-
-// Where each photo lies in a city's little pile, by how many there are.
-const SPREAD = [["left-[16%] top-4"], ["left-0 top-8", "right-0 top-2"], ["left-0 top-6", "right-0 top-2", "left-[16%] top-10"]]
 
 export default async function PlacesPage() {
   const { cities } = await getPlaces()
@@ -35,41 +31,21 @@ export default async function PlacesPage() {
           Nothing here yet: we’re still eating our way around.
         </p>
       ) : (
-        <ul className="mx-auto flex max-w-5xl flex-wrap justify-center gap-x-12 gap-y-14 pb-12">
-          {cities.map((city) => {
-            const photos = city.places.map((p) => ({ p, ph: mainPhoto(p) })).filter((x) => x.ph).slice(0, 3)
-            return (
-              <li key={city.slug} className="w-full max-w-[440px]">
-                <Link href={`/places/${city.slug}`} className={`${styles.lift} group block`}>
-                  <div className="relative mx-auto mb-8 h-[250px] max-w-[380px] sm:h-[280px]">
-                    {photos.map(({ p, ph }, i) => (
-                      <Polaroid
-                        key={ph!.id}
-                        photo={ph!}
-                        alt=""
-                        tilt={(photos.length === 1 ? [-2] : [-6, 5, -1.5])[i] + tilt(p.slug, 1)}
-                        tape={i === photos.length - 1}
-                        eager={i === photos.length - 1}
-                        className={`!absolute w-[68%] ${SPREAD[photos.length - 1][i]}`}
-                      />
-                    ))}
-                  </div>
-                  <h2 className={`${styles.hand} text-center text-5xl font-bold leading-none`}>{city.name}</h2>
-                  <p className="mt-2 text-center text-sm font-medium uppercase tracking-[0.14em] text-[#8A7B66]">
-                    {city.places.length} place{city.places.length === 1 ? "" : "s"}
-                  </p>
-                  {city.intro && (
-                    <p className={`${styles.serif} mx-auto mt-3 max-w-md text-center leading-relaxed text-[#4A4036]`}>
-                      {excerpt(city.intro, 180)}
-                    </p>
-                  )}
-                  <p className="mt-3 text-center font-semibold text-orange-700 group-hover:underline">
-                    Open the {city.name} pages →
-                  </p>
-                </Link>
-              </li>
-            )
-          })}
+        <ul className="mx-auto max-w-3xl space-y-3 pb-12">
+          {cities.map((city) => (
+            <li key={city.slug}>
+              <Link href={`/places/${city.slug}`} className={`${styles.place} group block px-5 py-4`}>
+                <h2 className="text-2xl font-semibold leading-tight">{city.name}</h2>
+                <p className="mt-1 text-sm text-[#6B5E4A]">
+                  {city.places.length} place{city.places.length === 1 ? "" : "s"}
+                </p>
+                {city.intro && (
+                  <p className={`${styles.serif} mt-2 leading-relaxed text-[#4A4036]`}>{excerpt(city.intro, 180)}</p>
+                )}
+                <p className="mt-2 text-sm font-semibold text-orange-700 group-hover:underline">Open {city.name} →</p>
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
     </main>
